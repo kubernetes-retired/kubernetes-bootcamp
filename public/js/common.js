@@ -8,8 +8,9 @@ $(function() {
 	//});
 	//
 
-	$('.content__trigger').on('click', function(){
+	$('.content__trigger, .header__sider').on('click', function(){
 		$('body').toggleClass('page_open');
 	});
+
 });
 

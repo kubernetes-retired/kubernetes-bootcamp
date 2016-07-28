@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1469713383645">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469713383645" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1469713383571">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469713383571" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -61,8 +61,8 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.png?v=1469713383645" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469713383645" alt="">
+		<img class="header__logo" src="./public/images/logo.png?v=1469713383571" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469713383571" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
@@ -71,19 +71,19 @@
 </header>
 
 			<ul class="nav">
-				<li class="active">
+				<li>
 					<a href="index.html">
 						<span class="sidebar__ico"></span>
 						Bootcamp Overview
 					</a>
 				</li>
-				<li class="sidebar__subnav">
+				<li class="sidebar__subnav open">
 					<a href="1-0.html">
 						<span class="sidebar__ico"></span>
 						1. Create a cluster
 					</a>
 					<ul class="nav">
-						<li>
+						<li class="active">
 							<a href="1-1.html">
 								<span class="sidebar__ico"></span>
 								Introduction to kubernetes
@@ -104,7 +104,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="2-0.html">
+					<a href="404.html">
 						<span class="sidebar__ico"></span>
 						2. Deploy an app
 					</a>
@@ -116,37 +116,37 @@
 					</a>
 				</li>
 				<li>
-					<a href="4-0.html">
+					<a href="404.html">
 						<span class="sidebar__ico"></span>
 						4. Explore your app
 					</a>
 				</li>
 				<li>
-					<a href="5-0.html">
+					<a href="404.html">
 						<span class="sidebar__ico"></span>
 						5. Scale up your app
 					</a>
 				</li>
 				<li class="sidebar__subnav">
-					<a href="6-0.html">
+					<a href="404.html">
 						<span class="sidebar__ico"></span>
 						6. Update your app
 					</a>
 					<ul class="nav">
 						<li>
-							<a href="6-1.html">
+							<a href="404.html">
 								<span class="sidebar__ico"></span>
 								Step A
 							</a>
 						</li>
 						<li>
-							<a href="6-2.html">
+							<a href="404.html">
 								<span class="sidebar__ico"></span>
 								Step B
 							</a>
 						</li>
 						<li>
-							<a href="6-3.html">
+							<a href="404.html">
 								<span class="sidebar__ico"></span>
 								Module 6 Quiz
 							</a>
@@ -212,87 +212,99 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li><a href="#">Duration: 120 mins</a></li>
+					<li><a href="1-0.html">Module 1</a></li>
+					<li><a href="index.html">Create a kubernetes cluster</a></li>
 				</ol>
 			</div>
 		</div>
 
-		<h1>Bootcamp Overview</h1>
-		<br>
+		<h1>Introduction to Kubernetes</h1>
 
 		<div class="row">
-			<div class="col-md-9">
-				<h2>What you will learn</h2>
-				<p><i style="color: #3771e3;">By the end of this bootcamp you will understand what Kubernetes does. You will also learn how to deploy, scale, update and debug containerized applications on a Kubernetes cluster using an interactive online terminal.</i></p>
+			<div class="col-md-12 text-left">
+				<a class="btn btn-default" href="#" role="button"><span class="btn__prev">‹</span> Back</a>
 			</div>
 		</div>
 
 		<br>
+		<br>
 
 		<div class="row">
-			<div class="col-md-9">
-				<h2>Why Kubernetes?</h2>
-				<p>Today users expect applications to be available 24/7. The way we build software is moving in this direction, allowing applications to be released and updated in a easy and fast way without downtime. We also need to be able to scale application in line with the user demand and we expect them to make intelligent use of the available resources. Kubernetes is a platform that facilitates those new requirements and was created using the experience accumulated by Google in this area.</p>
+			<div class="col-md-8">
+				<p>In order to facilitate a platform for deploying applications that is highly available, the underlying architecture needs to be designed in a way that provides 100% uptime. <b>Kubernetes is designed as a highly available cluster of computers that are connected to work as a single unit.</b> This abstraction allows us to deploy applications without thinking on what specific machines we need to do it. To make use of this new type of deployments, applications need to be packaged in a standard way: they need to be containerized. This is different compared to how applications were deployed in the past, when they were directly installed on specific machines as binaries deeply integrated into the host.</p>
+				<p><b>Kubernetes is an open-source platform for scheduling and running applications packaged in containers across computer clusters.</b></p>
+				<p>A Kubernetes cluster is formed out of 2 types of resources:<br>
+					<b>masters</b> - are managing the cluster<br>
+					<b>nodes</b> - are where we run applications</p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div class="col-md-4">
+				<div class="content__box content__box_lined">
+					<h3>Main concepts</h3>
+					<ul>
+						<li>cluster</li>
+						<li>master</li>
+						<li>node</li>
+						<li>minikube</li>
+					</ul>
+				</div>
+				<div class="content__box content__box_fill">
+					<p>
+						Kubernetes is an open-source platform for scheduling and running applications packaged in containers across computer clusters.
+					</p>
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+				<h2 style="color: #3771e3;">Cluster Diagram</h2>
 			</div>
 		</div>
 
-		<div class="content__modules">
-			<h2>Bootcamp Modules</h2>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="http://placehold.it/350x200">
-						<div class="caption">
-							<h5>1. Run your first app</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="http://placehold.it/350x200">
-						<div class="caption">
-							<h5>2. Explore your app</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="http://placehold.it/350x200">
-						<div class="caption">
-							<h5>3. Deployment</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="http://placehold.it/350x200">
-						<div class="caption">
-							<h5>4. Services</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="http://placehold.it/350x200">
-						<div class="caption">
-							<h5>5. Scale Up</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="http://placehold.it/350x200">
-						<div class="caption">
-							<h5>6. Update your app</h5>
-						</div>
-					</div>
+		<div class="row">
+			<div class="col-md-8">
+				<p><img src="http://placehold.it/1000x400"></p>
+			</div>
+			<div class="col-md-4">
+				<p><img src="http://placehold.it/480x400"></p>
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+				<b>Masters are responsible for managing the activity of the entire cluster.</b> The master nodes will coordinate all the activity happening in your cluster like scheduling applications, maintaining their desired state, scaling applications and rolling new updates. In order to assure that your cluster is highly available, you need to run multiple master instances (minimum 3).
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+				<p><b>A node is a worker machine in Kubernetes</b>, all your applications will run on nodes. Every node from the cluster is managed by the masters. On a typical node you will have tools for handling container operations (like Docker, rkt) and Kubelet, a tool for managing the node activity. To have a highly available cluster for your applications, you will need to have at least 3 nodes available.
+				<p>Deploying applications on Kubernetes means that you’ll ask a master to schedule your containers to run on some node agents according to your desired specifications. <b>Communications between the 2 type of nodes is done via an API.</b> The same API is exposed towards the users in order to facilitate interaction with the cluster.</p>
+				<p style="color: #3771e3;"><b><i><big>The name Kubernetes originates from Greek, meaning “helmsman” or “pilot”, and is the root of the words “governor” and “cybernetic”. K8s is an abbreviation obtained by replacing the 8 letters “ubernete” with 8.</big></i></b></p>
+				<p>Kubernetes can be installed both on physical or virtual machines, and can be deployed on your laptop, on your datacenter or in the cloud. The easiest (and recommended) way to run kubernetes on a development box is with
+					<a href="#">minikube</a> which will create on your local machine a VM with a simple cluster that has one resource node. Minikube is available for Linux and Mac OS systems, with Windows support coming in the next major release. The minikube CLI exposes the basic operations we can expect from a bootstrapping tool like: start, stop, status, delete. To keep things simple during this bootcamp, we’ll use an online terminal where we have already installed minikube.</p>
+				<p>Now that you know what Kubernetes is, let’s go to the online tutorial and start our first cluster!</p>
+			</div>
+			<div class="col-md-4">
+				<div class="content__box content__box_fill">
+					<p>
+						Masters are managing the cluster and the nodes are used to host the running applications.
+					</p>
 				</div>
 			</div>
 		</div>
+		<br>
 
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="#" role="button">Start Bootcamp <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="1-2.html" role="button">Start Bootcamp <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
