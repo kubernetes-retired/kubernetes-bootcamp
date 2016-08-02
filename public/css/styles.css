@@ -8542,6 +8542,8 @@ button.close
 {
     .nav a
     {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
         padding-left: 80px !important;
 
         color: #fff !important;
@@ -8618,6 +8620,13 @@ button.close
 {
     background: #fff;
 }
+@media screen and (max-width: 480px)
+{
+    .nav li.sidebar__subnav.active
+    {
+        background: rgba(0, 0, 0, .1);
+    }
+}
 .nav li li:after
 {
     width: 60px;
@@ -8658,15 +8667,15 @@ button.close
     {
         font-size: 18px;
 
-        position: absolute;
+        position: fixed;
         top: 60px;
+        bottom: 100%;
         left: 0;
 
-        overflow: hidden;
+        overflow: auto;
 
         width: 100%;
         min-height: 0;
-        max-height: 0;
 
         -webkit-transition: .24s ease-out;
                 transition: .24s ease-out; 
@@ -8676,7 +8685,7 @@ button.close
     }
     .page_open .sidebar__inner > .nav
     {
-        max-height: 1000px;
+        bottom: 0;
 
         opacity: 1;
     }
@@ -8695,16 +8704,16 @@ button.close
 
     content: '';
 
-    background: url('../images/nav_point.svg?v=1469803177607') no-repeat 50% 50%;
+    background: url('../images/nav_point.svg?v=1470121400517') no-repeat 50% 50%;
     background-size: cover;
 }
 .nav li.active > a > .sidebar__ico
 {
-    background-image: url('../images/nav_point_active.svg?v=1469803177607');
+    background-image: url('../images/nav_point_active.svg?v=1470121400517');
 }
 .nav .nav li.active > a > .sidebar__ico
 {
-    background-image: url('../images/nav_point_sub.svg?v=1469803177607');
+    background-image: url('../images/nav_point_sub.svg?v=1470121400517');
 }
 @media screen and (max-width: 480px)
 {
@@ -8738,10 +8747,8 @@ button.close
     margin: 0 0 0 -200px;
     padding: 20px 60px;
 
-    -webkit-transition: -webkit-transform .12s ease-out;
-            transition: -webkit-transform .12s ease-out;
-            transition:         transform .12s ease-out;
-            transition:         transform .12s ease-out, -webkit-transform .12s ease-out; 
+    -webkit-transition: .12s ease-out;
+            transition: .12s ease-out; 
 
     background: #fff;
     box-shadow: -6px 0 14px -4px rgba(0, 0, 0, .5);
@@ -8761,9 +8768,30 @@ button.close
 .page_open .content,
 .sidebar:hover + .content
 {
-    -webkit-transform: translateX(200px);
-        -ms-transform: translateX(200px);
-            transform: translateX(200px);
+    margin-left: 0;
+}
+@media screen and (max-width: 1200px)
+{
+    .page_open .content,
+    .sidebar:hover + .content
+    {
+        margin-left: -200px;
+
+        -webkit-transform: translateX(200px);
+            -ms-transform: translateX(200px);
+                transform: translateX(200px);
+    }
+}
+@media screen and (max-width: 1200px)
+{
+    .sidebar:hover + .content
+    {
+        margin-left: 0;
+
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 @media screen and (max-width: 480px)
 {
@@ -8812,6 +8840,8 @@ button.close
 {
     .content__sider
     {
+        z-index: -1; 
+
         display: none !important;
     }
 }
@@ -8910,7 +8940,7 @@ button.close
 .like img,
 .dislike img
 {
-    height: 80px;
+    width: 80px;
 }
 
 .content__award
@@ -8923,7 +8953,7 @@ button.close
 
 .content__badge
 {
-    height: 250px;
+    width: 250px;
 }
 
 .header
@@ -8954,6 +8984,16 @@ button.close
     text-decoration: none !important; 
 
     color: #231f20 !important;
+}
+@media screen and (max-width: 480px)
+{
+    .header__site
+    {
+        display: block;
+        overflow: hidden; 
+
+        width: 42px;
+    }
 }
 
 .header__logo
@@ -9323,6 +9363,10 @@ body
 
     background: #eee;
 }
+body.page_open
+{
+    overflow: hidden;
+}
 
 h1,
 h2,
@@ -9661,6 +9705,7 @@ p a:hover
     display: -ms-flexbox;
     display: flex;
 
+    margin: 30px 0 0;
     padding: 0 0 40px; 
 
     -webkit-box-pack: justify;
@@ -9721,33 +9766,44 @@ p a:hover
 {
     display: block;
 }
-.quiz__var_true.quiz__var_open .quiz__box
+
+.quiz__list_open .quiz__box
+{
+    cursor: default;
+}
+
+.quiz__list_open .quiz__var_true .quiz__box
 {
     border-color: #19eb7d;
     box-shadow: inset 0 0 0 1px #19eb7d;
 }
-.quiz__var_true.quiz__var_open .quiz__box:before
+.quiz__list_open .quiz__var_true .quiz__box:before
 {
-    background: url('../images/quiz_true.png?v=1469803177607') no-repeat 50% 50%;
+    display: block;
+
+    background: url('../images/quiz_true.png?v=1470121400517') no-repeat 50% 50%;
     background-size: cover;
 }
-.quiz__var_true.quiz__var_open .quiz__box:after
+.quiz__list_open .quiz__var_true .quiz__box:after
 {
     content: 'Correct !';
 
     color: #19eb7d;
 }
-.quiz__var_false.quiz__var_open .quiz__box
+
+.quiz__list_open .quiz__var_false .quiz__box
 {
     border-color: #ee4036;
     box-shadow: inset 0 0 0 1px #ee4036;
 }
-.quiz__var_false.quiz__var_open .quiz__box:before
+.quiz__list_open .quiz__var_false .quiz__box:before
 {
-    background: url('../images/quiz_false.png?v=1469803177607') no-repeat 50% 50%;
+    display: block;
+
+    background: url('../images/quiz_false.png?v=1470121400517') no-repeat 50% 50%;
     background-size: cover;
 }
-.quiz__var_false.quiz__var_open .quiz__box:after
+.quiz__list_open .quiz__var_false .quiz__box:after
 {
     content: 'Try again !';
 
@@ -9760,17 +9816,18 @@ p a:hover
 
     opacity: 0;
 }
-.quiz__var_open .quiz__note
+.quiz__list_open .quiz__note
 {
     opacity: 1;
 }
 
 .carousel-control
 {
-    top: 75px;
+    top: 50%;
 
     width: 50px;
     height: 50px;
+    margin: -38px 0 0;
 
     background: none !important;
 }
