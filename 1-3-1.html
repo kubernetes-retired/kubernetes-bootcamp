@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1469803628241">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469803628241" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1470121829007">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121829007" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -48,6 +48,7 @@
 	
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
+    <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
 	<script src="./public/js/common.js"></script>
 
 </head>
@@ -63,8 +64,8 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.png?v=1469803628241" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469803628241" alt="">
+		<img class="header__logo" src="./public/images/logo.svg?v=1470121829007" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121829007" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
@@ -231,84 +232,12 @@
 		<br>
 
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<h2>Question 1</h2>
-				<p>At it’s core, Kubernetes is a platform for:</p>
-				<p style="color: #3771e3;"><i><big>Select one answer</big></i></p>
-			</div>
-		</div>
-
-		<br>
-
-		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				<div class="quiz">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner" role="listbox">
-							<div class="item active">
-								<div class="quiz__list">
-									<div class="quiz__var quiz__var_false">
-										<div class="quiz__box">Managing servers</div>
-										<div class="quiz__note">The tool you’ll use to package your software will be Docker or rkt.</div>
-									</div>
-									<div class="quiz__var quiz__var_true">
-										<div class="quiz__box">Running and scheduling container applications on a cluster</div>
-										<div class="quiz__note">Kubernetes allows you to orchestrate and manage containers on distributed systems.</div>
-									</div>
-									<div class="quiz__var quiz__var_false">
-										<div class="quiz__box">Packaging software in containers</div>
-										<div class="quiz__note">Kubernetes can schedule workload on the cluster nodes but it is not a server management tool.</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="quiz__list">
-									<div class="quiz__var quiz__var_true">
-										<div class="quiz__box">Managing servers</div>
-										<div class="quiz__note">The tool you’ll use to package your software will be Docker or rkt.</div>
-									</div>
-									<div class="quiz__var quiz__var_false">
-										<div class="quiz__box">Running and scheduling container applications on a cluster</div>
-										<div class="quiz__note">Kubernetes allows you to orchestrate and manage containers on distributed systems.</div>
-									</div>
-									<div class="quiz__var quiz__var_false">
-										<div class="quiz__box">Packaging software in containers</div>
-										<div class="quiz__note">Kubernetes can schedule workload on the cluster nodes but it is not a server management tool.</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="quiz__list">
-									<div class="quiz__var quiz__var_false">
-										<div class="quiz__box">Managing servers</div>
-										<div class="quiz__note">The tool you’ll use to package your software will be Docker or rkt.</div>
-									</div>
-									<div class="quiz__var quiz__var_false">
-										<div class="quiz__box">Running and scheduling container applications on a cluster</div>
-										<div class="quiz__note">Kubernetes allows you to orchestrate and manage containers on distributed systems.</div>
-									</div>
-									<div class="quiz__var quiz__var_true">
-										<div class="quiz__box">Packaging software in containers</div>
-										<div class="quiz__note">Kubernetes can schedule workload on the cluster nodes but it is not a server management tool.</div>
-									</div>
-								</div>
-							</div>
-						</div>
 
-						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						</ol>
-						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-				</div>
+                <div id="quizTest"></div>
+
+				
 			</div>
 			<div class="col-md-1"></div>
 		</div>
