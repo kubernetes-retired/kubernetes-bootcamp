@@ -6,27 +6,26 @@ $(function() {
 
 });
 
-
 // Ractive quiz
 $(function() {
 
 	var quizMockData = [{
-		text	: 'Question 1 text text text',
+    text	: "At it's core, Kubernetes is a platform for:",
 		answers : [{
-			text		: 'Answer 1',
-			note		: 'Note for answer 1',
+			text		: 'Provisioning machines (simular to Puppet, Ansible)',
+			note		: 'Kubernetes can schedule workloads on the cluster nodes, but is not a machine provisioning tool',
+			isCorrect	:false 
+		},{
+			text		: 'Running and scheduling container applications on a cluster',
+			note		: 'Kubernetes allows you to orchestrate and manage containers on distributed systems',
 			isCorrect	: true
 		},{
-			text		: 'Answer 2',
-			note		: 'Note for answer 2',
-			isCorrect	: false
-		},{
-			text		: 'Answer 3',
-			note		: 'Note for answer 3',
+			text		: "Packaging software in containers",
+			note		: "The tool you’ll use to package your software will be Docker or rkt",
 			isCorrect	: false
 		}],
 	},{
-		text	: 'Question 2 text text text',
+    text	: 'In kubernetes, a node is:"
 		answers : [{
 			text		: 'Answer 1',
 			note		: 'Note for answer 1',
@@ -102,7 +101,6 @@ $(function() {
 		}
 	});
 
-
 	$('.quiz__var').on('click', function(){
 		var thisVar = $(this);
 		if (!thisVar.parents().hasClass('quiz__list_open')) {
@@ -115,5 +113,3 @@ $(function() {
 	})
 
 });
-
-
