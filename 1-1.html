@@ -234,29 +234,40 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p>In order to facilitate a platform for deploying applications that is highly available, the underlying architecture needs to be designed in a way that provides 100% uptime. <b>Kubernetes is designed as a highly available cluster of computers that are connected to work as a single unit.</b> This abstraction allows us to deploy applications without thinking on what specific machines we need to do it. To make use of this new type of deployments, applications need to be packaged in a standard way: they need to be containerized. This is different compared to how applications were deployed in the past, when they were directly installed on specific machines as binaries deeply integrated into the host.</p>
-				<p><b>Kubernetes is an open-source platform for scheduling and running applications packaged in containers across computer clusters.</b></p>
-				<p>A Kubernetes cluster is formed out of 2 types of resources:<br>
-					<b>masters</b> - are managing the cluster<br>
-					<b>nodes</b> - are where we run applications</p>
-				<p></p>
-				<p></p>
-				<p></p>
-				<p></p>
+        <p>
+          Kubernetes is designed as a highly available cluster of computers that are connected to work as a single unit.
+          This abstraction allows us to deploy applications without thinking about which specific machines they need to run on.
+          To make use of this new model of deployment, applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
+          This is different compared to how applications were deployed in the past, when they were directly installed on specific machines as packages deeply integrated into the host.
+          Kubernetes role is to automate the distribution (scheduling) of application containers across a cluster in an efficient way.
+          Kubernetes is an <a href="https://github.com/kubernetes/kubernetes">open-source</a> platform and is production-ready. 
+        </p>
+
+        <p style="color: #3771e3;"><b><i><big>
+         </big></i></b></p>
+
+        <p>
+          A Kubernetes cluster is formed out of two types of resources: 
+          <ul>
+            <li><b>Master</b>  is coordinating the cluster</li>
+            <li><b>Nodes</b> are where we run applications</li>
+          </ul>
+        </p>
 			</div>
+
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
 					<h3>Main concepts</h3>
 					<ul>
-						<li>cluster</li>
-						<li>master</li>
-						<li>node</li>
-						<li>minikube</li>
+						<li>Kubernetes Cluster</li>
+						<li>Kubernetes Master</li>
+						<li>Kubernetes Node</li>
+						<li>MiniKube</li>
 					</ul>
 				</div>
 				<div class="content__box content__box_fill">
 					<p>
-						Kubernetes is an open-source platform for scheduling and running applications packaged in containers across computer clusters.
+            Kubernetes is a production-grade, open-source platform that orchestrates the placement (scheduling) and execution of application containers within and across computer clusters.
 					</p>
 				</div>
 			</div>
@@ -281,25 +292,40 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<b>Masters are responsible for managing the activity of the entire cluster.</b> The master nodes will coordinate all the activity happening in your cluster like scheduling applications, maintaining their desired state, scaling applications and rolling new updates. In order to assure that your cluster is highly available, you need to run multiple master instances (minimum 3).
-			</div>
-		</div>
-		<br>
+        <p>
+        <b>Masters are responsible for managing the cluster.</b>
+        The master nodes will coordinate all the activity happening in your cluster like scheduling applications, maintaining their desired state, scaling applications and rolling new updates. 
+        </p>
 
-		<div class="row">
-			<div class="col-md-8">
-				<p><b>A node is a worker machine in Kubernetes</b>, all your applications will run on nodes. Every node from the cluster is managed by the masters. On a typical node you will have tools for handling container operations (like Docker, rkt) and Kubelet, a tool for managing the node activity. To have a highly available cluster for your applications, you will need to have at least 3 nodes available.
-				<p>Deploying applications on Kubernetes means that you’ll ask a master to schedule your containers to run on some node agents according to your desired specifications. <b>Communications between the 2 type of nodes is done via an API.</b> The same API is exposed towards the users in order to facilitate interaction with the cluster.</p>
-				<p style="color: #3771e3;"><b><i><big>The name Kubernetes originates from Greek, meaning “helmsman” or “pilot”, and is the root of the words “governor” and “cybernetic”. K8s is an abbreviation obtained by replacing the 8 letters “ubernete” with 8.</big></i></b></p>
-				<p>Kubernetes can be installed both on physical or virtual machines, and can be deployed on your laptop, on your datacenter or in the cloud. The easiest (and recommended) way to run kubernetes on a development box is with
-					<a href="#">minikube</a> which will create on your local machine a VM with a simple cluster that has one resource node. Minikube is available for Linux and Mac OS systems, with Windows support coming in the next major release. The minikube CLI exposes the basic operations we can expect from a bootstrapping tool like: start, stop, status, delete. To keep things simple during this bootcamp, we’ll use an online terminal where we have already installed minikube.</p>
-				<p>Now that you know what Kubernetes is, let’s go to the online tutorial and start our first cluster!</p>
+        <p>
+        <b>A node is a VM or a physical computer that is used as a worker machine in a Kubernetes cluster.</b>
+        Every node from the cluster is managed by the master. On a typical node you will have tools for handling container operations (like Docker, rkt) and Kubelet, an agent for managing the node. A Kubernetes cluster that handles production traffic should have a minimum of three nodes.
+        </p>
+
+        <p>
+          When we deploy applications on Kubernetes we tell the master to start our containers and ithe will schedule them to run on some node agents. 
+          <b>Communications between the master and the nodes is done via an API exposed by the master.</b>
+          The same API is exposed towards the users in order to facilitate interaction with the cluster.
+        </p>
+
+        <p>
+          A Kubernetes cluster can be deployed on either physical or virtual machines. The recommended way to start a Kubernetes cluster for development purposes is by using  
+          <a href="https://github.com/kubernetes/minikube">minikube</a>.
+          Minikube creates a VM on your local machine and deploys a simple cluster containing only one node. Minikube is available for Linux and Mac OS systems, with Windows support coming in the next major release. The minikube CLI provides basic bootstrapping operations such as: start, stop, status and delete. During this bootcamp we’ll use an online terminal with minikube pre-installed. 
+        </p>
+
+        <p>
+          The name Kubernetes originates from Greek, meaning “helmsman” or “pilot”, and is the root of the words “governor” and “cybernetic”. K8s is an abbreviation obtained by replacing the 8 letters “ubernete” with 8.
+        </p>
+
+        <p>
+          Now that you know what Kubernetes is, let’s go to the online tutorial and start our first cluster:
+        </p>
 			</div>
+
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
-					<p>
-						Masters are managing the cluster and the nodes are used to host the running applications.
-					</p>
+					<p> Masters manage the cluster and the nodes are used to host the running applications.  </p>
 				</div>
 			</div>
 		</div>
@@ -307,7 +333,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="1-2.html" role="button">Start Bootcamp <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="1-2.html" role="button">Start online tutorial<span class="btn__next">›</span></a>
 			</div>
 		</div>
 
