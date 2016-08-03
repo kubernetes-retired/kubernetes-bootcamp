@@ -6,52 +6,53 @@ $(function() {
 
 });
 
+
 // Ractive quiz
 $(function() {
 
 	var quizMockData = [{
-    text	: "At it's core, Kubernetes is a platform for:",
+		text	: 'At its core, Kubernetes is a platform for:',
 		answers : [{
-			text		: 'Provisioning machines (simular to Puppet, Ansible)',
-			note		: 'Kubernetes can schedule workloads on the cluster nodes, but is not a machine provisioning tool',
-			isCorrect	:false 
+			text		: 'Provisioning machines (similar to Puppet, Ansible)',
+			note		: 'Kubernetes can schedule workloads on the cluster nodes but it is not a machine provisioning tool.',
+			isCorrect	: false
 		},{
 			text		: 'Running and scheduling container applications on a cluster',
 			note		: 'Kubernetes allows you to orchestrate and manage containers on distributed systems',
 			isCorrect	: true
 		},{
-			text		: "Packaging software in containers",
-			note		: "The tool you’ll use to package your software will be Docker or rkt",
+			text		: 'Packaging software in containers',
+			note		: 'The tool you’ll use to package your software will be Docker or rkt.',
 			isCorrect	: false
 		}],
 	},{
-    text	: 'In kubernetes, a node is:"
+		text	: 'In Kubernetes, a node is:',
 		answers : [{
-			text		: 'Answer 1',
-			note		: 'Note for answer 1',
+			text		: 'A tool for starting a kubernetes cluster on a local machine',
+			note		: 'You can start a Kubernetes cluster using minikube',
 			isCorrect	: false
 		},{
-			text		: 'Answer 2',
-			note		: 'Note for answer 2',
-			isCorrect	: false
-		},{
-			text		: 'Answer 3',
-			note		: 'Note for answer 3',
+			text		: 'A worker machine',
+			note		: 'The Kubernetes nodes are the place where we’re going to deploy our applications',
 			isCorrect	: true
+		},{
+			text		: 'A machine that coordinates the scheduling and management of application containers on the cluster',
+			note		: 'The Master is coordinating the Kubernetes cluster',
+			isCorrect	: false
 		}],
 	},{
-		text	: 'Question 3 text text text',
+		text	: 'What can you deploy on Kubernetes?',
 		answers : [{
-			text		: 'Answer 1',
-			note		: 'Note for answer 1',
+			text		: 'Containers',
+			note		: 'Kubernetes supports Docker, rkt and other types of containers',
 			isCorrect	: true
 		},{
-			text		: 'Answer 2',
-			note		: 'Note for answer 2',
+			text		: 'Virtual machines',
+			note		: 'Kubernetes (on its own) cannot deploy virtual machines',
 			isCorrect	: false
 		},{
-			text		: 'Answer 3',
-			note		: 'Note for answer 3',
+			text		: 'System processes (like sshd, httpd)',
+			note		: 'Kubernetes (on its own) cannot deploy system processes',
 			isCorrect	: false
 		}],
 	}]
@@ -63,7 +64,7 @@ $(function() {
 								<div class="item {{ i === 0 ? "active" : "" }}">\
 									<div class="row">\
 										<div class="col-md-12">\
-											<h2>Question {{ i }}</h2>\
+											<h2>Question {{ ++i }}</h2>\
 											<p>{{ text }}</p>\
 											<p style="color: #3771e3;"><i><big>Select one answer</big></i></p>\
 										</div>\
@@ -100,6 +101,7 @@ $(function() {
 			questions: quizMockData
 		}
 	});
+
 
 	$('.quiz__var').on('click', function(){
 		var thisVar = $(this);
