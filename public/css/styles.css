@@ -8520,7 +8520,8 @@ button.close
 
 .nav
 {
-    font-family: Roboto Slab, Roboto, 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif; 
+    font-family: Roboto Slab, Roboto, 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif;
+    font-size: 14px; 
 
     min-height: 600px;
     padding: 0;
@@ -8529,7 +8530,7 @@ button.close
 }
 .nav a
 {
-    padding: 20px 20px 20px 100px !important;
+    padding: 15px 20px 16px 100px !important;
 
     color: #231f20 !important; 
     background: none !important;
@@ -8629,6 +8630,8 @@ button.close
 }
 .nav li li:after
 {
+    top: 28px;
+
     width: 60px;
 
     border-top: 2px dashed #53a2e5; 
@@ -8665,7 +8668,7 @@ button.close
 {
     .sidebar__inner > .nav
     {
-        font-size: 18px;
+        font-size: 16px;
 
         position: fixed;
         top: 60px;
@@ -8695,7 +8698,7 @@ button.close
 {
     position: absolute;
     z-index: 40;
-    top: 11px;
+    top: 7px;
     left: 40px;
 
     width: 22px;
@@ -8704,16 +8707,16 @@ button.close
 
     content: '';
 
-    background: url('../images/nav_point.svg?v=1470121400517') no-repeat 50% 50%;
+    background: url('../images/nav_point.svg?v=1470227518486') no-repeat 50% 50%;
     background-size: cover;
+}
+.nav li.marked > a > .sidebar__ico
+{
+    background-image: url('../images/nav_point_active.svg?v=1470227518486');
 }
 .nav li.active > a > .sidebar__ico
 {
-    background-image: url('../images/nav_point_active.svg?v=1470121400517');
-}
-.nav .nav li.active > a > .sidebar__ico
-{
-    background-image: url('../images/nav_point_sub.svg?v=1470121400517');
+    background-image: url('../images/nav_point_sub.svg?v=1470227518486');
 }
 @media screen and (max-width: 480px)
 {
@@ -8736,6 +8739,11 @@ button.close
 .nav li.open > .nav
 {
     display: block;
+}
+.nav li.active > .nav a,
+.nav li.open > .nav a
+{
+    border-top: 1px solid #e5eaf9;
 }
 
 .content
@@ -8798,7 +8806,7 @@ button.close
     .content
     {
         margin-left: 0;
-        padding-top: 60px;
+        padding-top: 80px;
 
         box-shadow: none;
     }
@@ -9353,7 +9361,8 @@ button.close
 body
 {
     font-family: Roboto, 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif; 
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.5;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9380,7 +9389,7 @@ h6
 
 h1
 {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold; 
 
     margin-bottom: 20px;
@@ -9634,6 +9643,34 @@ p a:hover
     width: 100%;
     margin: 50px 0;
 }
+@media screen and (max-width: 762px)
+{
+    .katacoda
+    {
+        display: block;
+    }
+}
+
+.katacoda__alert
+{
+    font-family: Inconsolata, Roboto, 'Helvetica Neue', Helvetica, 'Open Sans', Arial, sans-serif;
+
+    display: none;
+
+    padding: 20px;
+
+    text-align: center; 
+
+    color: #fff;
+    background: #383732;
+}
+@media screen and (max-width: 762px)
+{
+    .katacoda__alert
+    {
+        display: block;
+    }
+}
 
 .katacoda__about
 {
@@ -9646,6 +9683,15 @@ p a:hover
     vertical-align: top; 
 
     background: #f7f7f7;
+}
+@media screen and (max-width: 762px)
+{
+    .katacoda__about
+    {
+        display: block;
+
+        width: auto;
+    }
 }
 
 .katacoda__box
@@ -9661,6 +9707,13 @@ p a:hover
     width: 100%;
 
     vertical-align: bottom;
+}
+@media screen and (max-width: 762px)
+{
+    .katacoda__box
+    {
+        display: none;
+    }
 }
 
 .katacoda__steps
@@ -9781,7 +9834,7 @@ p a:hover
 {
     display: block;
 
-    background: url('../images/quiz_true.png?v=1470121400517') no-repeat 50% 50%;
+    background: url('../images/quiz_true.png?v=1470227518486') no-repeat 50% 50%;
     background-size: cover;
 }
 .quiz__list_open .quiz__var_true .quiz__box:after
@@ -9800,7 +9853,7 @@ p a:hover
 {
     display: block;
 
-    background: url('../images/quiz_false.png?v=1470121400517') no-repeat 50% 50%;
+    background: url('../images/quiz_false.png?v=1470227518486') no-repeat 50% 50%;
     background-size: cover;
 }
 .quiz__list_open .quiz__var_false .quiz__box:after
@@ -9883,4 +9936,13 @@ p a:hover
     {
         display: none;
     }
+}
+
+.list-blue-dots
+{
+    color: #326de6;
+}
+.list-blue-dots span
+{
+    color: #231f20;
 }

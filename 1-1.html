@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>K8S - Bootcamp Overview</title>
+	<title>Kubernetes Bootcamp</title>
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -74,19 +74,19 @@
 </header>
 
 			<ul class="nav">
-				<li>
+				<li class="marked">
 					<a href="index.html">
 						<span class="sidebar__ico"></span>
 						Bootcamp Overview
 					</a>
 				</li>
-				<li class="sidebar__subnav open">
+				<li class="sidebar__subnav open marked">
 					<a href="1-0.html">
 						<span class="sidebar__ico"></span>
 						1. Create a cluster
 					</a>
 					<ul class="nav">
-						<li class="active">
+						<li class="active marked">
 							<a href="1-1.html">
 								<span class="sidebar__ico"></span>
 								Introduction to kubernetes
@@ -233,9 +233,9 @@
 					</ul>
 				</div>
 				<div class="content__box content__box_fill">
-					<p>
+					<p><i>
 						Kubernetes is a production-grade, open-source platform that orchestrates the placement (scheduling) and execution of application containers within and across computer clusters.
-					</p>
+					</i></p>
 				</div>
 			</div>
 		</div>
@@ -257,13 +257,18 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p><b> The Master is responsible for managing the cluster.</b> The master nodes will coordinate all the activity happening in your cluster like scheduling applications, maintaining their desired state, scaling applications and rolling new updates.</p>
+				<p><b>A node is a VM or a physical computer that is used as a worker machine in a Kubernetes cluster.</b> Every node from the cluster is managed by the master. On a typical node you will have tools for handling container operations (like Docker, rkt) and Kubelet, an agent for managing the node. A Kubernetes cluster that handles production traffic should have a minimum of three nodes.</p>
+				
+			</div>
+			<div class="col-md-4">
+				<div class="content__box content__box_fill">
+					<p><i> Masters manage the cluster and the nodes are used to host the running applications.  </i></p>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-8">
-				<p><b>A node is a VM or a physical computer that is used as a worker machine in a Kubernetes cluster.</b> Every node from the cluster is managed by the master. On a typical node you will have tools for handling container operations (like Docker, rkt) and Kubelet, an agent for managing the node. A Kubernetes cluster that handles production traffic should have a minimum of three nodes.</p>
-				
 				<p>When we deploy applications on Kubernetes we tell the master to start our containers and it will schedule them to run on some node agents. <b>Communications between the master and the nodes is done via an API exposed by the master. </b> The same API is exposed towards the users in order to facilitate interaction with the cluster.</p>
 			
 				<p>A Kubernetes cluster can be deployed on either physical or virtual machines. The recommended way to start a Kubernetes cluster for development purposes is by using  <a href="https://github.com/kubernetes/minikube">minikube</a>.  Minikube creates a VM on your local machine and deploys a simple cluster containing only one node. Minikube is available for Linux, Mac OS  and Windows systems. The minikube CLI provides basic bootstrapping operations such as: start, stop, status and delete. During this bootcamp we’ll use an online terminal with minikube pre-installed.</p>
@@ -271,11 +276,7 @@
 				<p>The name Kubernetes originates from Greek, meaning “helmsman” or “pilot”, and is the root of the words “governor” and “cybernetic”. K8s is an abbreviation obtained by replacing the 8 letters “ubernete” with 8.</p>
 
 				<p>Now that you know what Kubernetes is, let’s go to the online tutorial and start our first cluster!</p>
-			</div>
-			<div class="col-md-4">
-				<div class="content__box content__box_fill">
-					<p> Masters manage the cluster and the nodes are used to host the running applications.  </p>
-				</div>
+				
 			</div>
 		</div>
 		<br>

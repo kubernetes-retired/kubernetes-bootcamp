@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>K8S - Bootcamp Overview</title>
+	<title>Kubernetes Bootcamp</title>
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1470121829062">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121829062" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1469803628195">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469803628195" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -48,7 +48,6 @@
 	
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
-    <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
 	<script src="./public/js/common.js"></script>
 
 </head>
@@ -64,8 +63,8 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.svg?v=1470121829062" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121829062" alt="">
+		<img class="header__logo" src="./public/images/logo.png?v=1469803628195" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469803628195" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
@@ -74,32 +73,44 @@
 </header>
 
 			<ul class="nav">
-				<li>
+				<li class="marked">
 					<a href="index.html">
 						<span class="sidebar__ico"></span>
 						Bootcamp Overview
 					</a>
 				</li>
-				<li class="sidebar__subnav">
+				<li class="marked">
 					<a href="1-0.html">
 						<span class="sidebar__ico"></span>
 						1. Create a cluster
 					</a>
+				</li>
+				<li class="marked">
+					<a href="2-0.html">
+						<span class="sidebar__ico"></span>
+						2. Deploy an app
+					</a>
+				</li>
+				<li class="sidebar__subnav open active">
+					<a href="3-0.html">
+						<span class="sidebar__ico"></span>
+						3. Explore your app
+					</a>
 					<ul class="nav">
 						<li>
-							<a href="1-1.html">
+							<a href="3-1.html">
 								<span class="sidebar__ico"></span>
-								Introduction to kubernetes
+								Pods and Nodes
 							</a>
 						</li>
 						<li>
-							<a href="1-2.html">
+							<a href="3-2.html">
 								<span class="sidebar__ico"></span>
 								Try interactively
 							</a>
 						</li>
 						<li>
-							<a href="1-3.html">
+							<a href="3-3.html">
 								<span class="sidebar__ico"></span>
 								Quiz
 							</a>
@@ -107,54 +118,22 @@
 					</ul>
 				</li>
 				<li>
-					<a href="404.html">
-						<span class="sidebar__ico"></span>
-						2. Deploy an app
-					</a>
-				</li>
-				<li class="active">
-					<a href="3-0.html">
-						<span class="sidebar__ico"></span>
-						3. Explore your app
-					</a>
-				</li>
-				<li>
-					<a href="404.html">
+					<a href="4-0.html">
 						<span class="sidebar__ico"></span>
 						4. Explore your app
 					</a>
 				</li>
 				<li>
-					<a href="404.html">
+					<a href="5-0.html">
 						<span class="sidebar__ico"></span>
 						5. Scale up your app
 					</a>
 				</li>
 				<li class="sidebar__subnav">
-					<a href="404.html">
+					<a href="6-0.html">
 						<span class="sidebar__ico"></span>
 						6. Update your app
 					</a>
-					<ul class="nav">
-						<li>
-							<a href="404.html">
-								<span class="sidebar__ico"></span>
-								Step A
-							</a>
-						</li>
-						<li>
-							<a href="404.html">
-								<span class="sidebar__ico"></span>
-								Step B
-							</a>
-						</li>
-						<li>
-							<a href="404.html">
-								<span class="sidebar__ico"></span>
-								Module 6 Quiz
-							</a>
-						</li>
-					</ul>
 				</li>
 			</ul>
 
@@ -163,17 +142,17 @@
 	<div class="footer__content">
 		<ul class="footer__social">
 			<li class="footer__social-item">
-				<a class="footer__network" href="#" target="_blank">
+				<a class="footer__network" href="https://twitter.com/kubernetesio" target="_blank">
 					<i class="fa fa-twitter" aria-hidden="true"></i>
 				</a>
 			</li>
 			<li class="footer__social-item">
-				<a class="footer__network" href="#" target="_blank">
+				<a class="footer__network" href="https://github.com/kubernetes/kubernetes" target="_blank">
 					<i class="fa fa-github" aria-hidden="true"></i>
 				</a>
 			</li>
 			<li class="footer__social-item">
-				<a class="footer__network" href="#" target="_blank">
+				<a class="footer__network" href="https://groups.google.com/forum/#!forum/google-containers" target="_blank">
 					<i class="fa fa-envelope" aria-hidden="true"></i>
 				</a>
 			</li>
@@ -181,13 +160,13 @@
 
 		<ul class="footer__menu">
 			<li class="footer__item">
-				<a class="footer__link" href="#">Kubernetes</a>
+				<a class="footer__link" href="https://kubernetes.io/">Kubernetes</a>
 			</li>
 			<li class="footer__item">
-				<a class="footer__link" href="#">View Documentation</a>
+				<a class="footer__link" href="https://kubernetes.io/docs/">View Documentation</a>
 			</li>
 			<li class="footer__item">
-				<a class="footer__link" href="#">Github</a>
+				<a class="footer__link" href="https://github.com/kubernetes/kubernetes">Github</a>
 			</li>
 		</ul>
 
@@ -215,57 +194,51 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li class="active">Kubernetes Bootcamp</li>
+					<li class="active">Module 3</li>
+					<li><a href="index.html">Duration: 10 mins</a></li>
 				</ol>
 			</div>
 		</div>
 
-		<h1 class="title-light" style="color: #3771e3;">Congratulations!</h1>
+		<h1>Explore your app</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="1-3-2.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="2-3.html" role="button"><span class="btn__prev">‹</span> Back</a>
 			</div>
 		</div>
 
 		<br>
 		<br>
-		<h2>Yay! You have completed the Bootcamp.</h2>
 
-		<br>
 		<div class="row">
 			<div class="col-md-8">
-				<div class="content__award">
-					<img class="content__badge" src="./public/images/badge-01.svg?v=1470121829062" alt="">
-				</div>
+				<h3>Module overview</h3>
+				<ul style="color: #3771e3;">
+					<li><i>Learn about Kubernetes <a href="http://kubernetes.io/docs/user-guide/pods/">Pods</a></i></li>
+					<li><i>Learn about Kubernetes <a href="https://github.com/kubernetes/kubernetes/blob/master/docs/admin/node.md">Nodes</a></i></li>
+					<li><i>Troubleshoot deployed applications</i></li>
+				</ul>
+				<br>
+				<p><img src="./public/images/module_03.svg?v=1469803628347"></p>
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
-					<h2 class="title-light" style="color: #3771e3;">Rate Bootcamp</h2>
-					<div class="row">
-						<div class="col-md-6 text-center">
-							<a class="like" href="#" role="button">
-								<img src="./public/images/like.svg?v=1470121829062" alt=""><br>
-								Like
-							</a>
-						</div>
-						<div class="col-md-6 text-center">
-							<a class="dislike" href="#" role="button">
-								<img src="./public/images/dislike.svg?v=1470121829062" alt=""><br>
-								Disike
-							</a>
-						</div>
-					</div>
+					<h3>What you need to know first</h3>
+					<p>
+						What are <a href="2-0.html">Deployments</a> <br>
+						How to deploy applications on Kubernetes
+					</p>
 				</div>
 			</div>
 		</div>
 		<br>
+		<br>
+		<br>
 
 		<div class="row">
-			<div class="col-md-4">
-				<button class="btn btn-lg btn-block btn-success" type="button" data-toggle="modal" data-target="#twitterModal"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet about Bootcamp</button>
-				<br>
-				<a class="btn btn-lg btn-block btn-primary" href="#" role="button">Go to K8S Documentation</a>
+			<div class="col-md-12">
+				<a class="btn btn-lg btn-success" href="3-1.html" role="button">Start Module 3 <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -280,17 +253,17 @@
 	<div class="footer__content">
 		<ul class="footer__social">
 			<li class="footer__social-item">
-				<a class="footer__network" href="#" target="_blank">
+				<a class="footer__network" href="https://twitter.com/kubernetesio" target="_blank">
 					<i class="fa fa-twitter" aria-hidden="true"></i>
 				</a>
 			</li>
 			<li class="footer__social-item">
-				<a class="footer__network" href="#" target="_blank">
+				<a class="footer__network" href="https://github.com/kubernetes/kubernetes" target="_blank">
 					<i class="fa fa-github" aria-hidden="true"></i>
 				</a>
 			</li>
 			<li class="footer__social-item">
-				<a class="footer__network" href="#" target="_blank">
+				<a class="footer__network" href="https://groups.google.com/forum/#!forum/google-containers" target="_blank">
 					<i class="fa fa-envelope" aria-hidden="true"></i>
 				</a>
 			</li>
@@ -298,13 +271,13 @@
 
 		<ul class="footer__menu">
 			<li class="footer__item">
-				<a class="footer__link" href="#">Kubernetes</a>
+				<a class="footer__link" href="https://kubernetes.io/">Kubernetes</a>
 			</li>
 			<li class="footer__item">
-				<a class="footer__link" href="#">View Documentation</a>
+				<a class="footer__link" href="https://kubernetes.io/docs/">View Documentation</a>
 			</li>
 			<li class="footer__item">
-				<a class="footer__link" href="#">Github</a>
+				<a class="footer__link" href="https://github.com/kubernetes/kubernetes">Github</a>
 			</li>
 		</ul>
 
@@ -320,28 +293,6 @@
 
 </div>
 
-
-	<div class="modal fade" id="twitterModal" tabindex="-1" role="dialog" aria-labelledby="twitterModalLabel">
-		<div class="modal-dialog" role="document">
-			<form>
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title" id="myModalLabel">
-							Share this on
-							<img class="modal-twitter" src="./public/images/twitter.png?v=1470121829062" alt="">
-						</h2>
-					</div>
-					<div class="modal-body">
-						<textarea class="form-control" rows="3" placeholder="Sample tweet text"></textarea>
-					</div>
-					<div class="modal-footer">
-						<div class="modal-counter"><small>75 charecters</small></div>
-						<button type="submit" class="btn btn-lg btn-success">Tweet this!</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
 
 
 </body>
