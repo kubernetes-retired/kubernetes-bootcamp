@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1470121829007">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121829007" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1470121828969">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -64,8 +64,8 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.svg?v=1470121829007" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121829007" alt="">
+		<img class="header__logo" src="./public/images/logo.svg?v=1470121828969" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121828969" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
@@ -73,44 +73,44 @@
 	</div>
 </header>
 
-<ul class="nav">
+			<ul class="nav">
 				<li class="marked">
 					<a href="index.html">
 						<span class="sidebar__ico"></span>
 						Bootcamp Overview
 					</a>
 				</li>
-				<li class="sidebar__subnav open marked">
+				<li class="marked">
 					<a href="1-0.html">
 						<span class="sidebar__ico"></span>
 						1. Create a cluster
 					</a>
+				</li>
+				<li class="sidebar__subnav open marked">
+					<a href="2-0.html">
+						<span class="sidebar__ico"></span>
+						2. Deploy an app
+					</a>
 					<ul class="nav">
-						<li class="marked">
-							<a href="1-1.html">
+						<li class="active marked">
+							<a href="2-1.html">
 								<span class="sidebar__ico"></span>
-								Introduction to kubernetes
+								Your first app deployment
 							</a>
 						</li>
-						<li class="marked">
-							<a href="1-2.html">
+						<li>
+							<a href="2-2.html">
 								<span class="sidebar__ico"></span>
 								Try interactively
 							</a>
 						</li>
-						<li class="active marked">
-							<a href="1-3.html">
+						<li>
+							<a href="2-3.html">
 								<span class="sidebar__ico"></span>
 								Quiz
 							</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="2-0.html">
-						<span class="sidebar__ico"></span>
-						2. Deploy an app
-					</a>
 				</li>
 				<li>
 					<a href="3-0.html">
@@ -195,38 +195,95 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li><a href="1-0.html">Module 1 | Create a Kubernetes cluster</a></li>
+					<li><a href="2-0.html">Module 2 | Deploy an app</a></li>
 				</ol>
 			</div>
 		</div>
-
-		<h1>Quiz | Introduction to Kubernetes cluster</h1>
+		
+		<h1>Your first application deployment</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="1-3.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="2-0.html" role="button"><span class="btn__prev">‹</span> Back</a>
 			</div>
 		</div>
 
+		<br>
 		<br>
 
 		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-10">
+			<div class="col-md-8">
+				<p>
+				Once you have a running Kubernetes cluster, the next step is to deploy your containerized applications on top of it. In Kubernetes, a <b>Deployment</b> is responsible for creating and updating instances of your application. The master will schedule application instances created by the deployment onto Nodes.
+				</p>
 
-                <div id="quizTest"></div>
+				<p>After creating application instances, a Deployment Controller continuously watches them, and replaces an instance if the Node hosting it goes down or it is deleted. <b>This provides a self-healing mechanism to address machine failure and machine maintenance. </b></p>
+
+				<p>In a pre-orchestration world, installation scripts would often be used to start applications, but they did not allow recovery from machine failure.  By both creating your application instances and keeping them running across Nodes, Deployments provide a fundamentally different approach to application management. </p>
+
+				
+				
+			</div>
+
+			<div class="col-md-4">
+				<div class="content__box content__box_lined">
+					<h3>Summary:</h3>
+					<ul>
+						<li>Deployments</li>
+						<li>Kubectl</li>
+					</ul>
+				</div>
+				<div class="content__box content__box_fill">
+					<p><i>
+						A Deployment is responsible for creating and updating instances of your application
+					</i></p>
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+				<h2 style="color: #3771e3;">Deploying your first app on Kubernetes</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8">
+				<p><img src="./public/images/module_02_first_app.svg"></p>
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+
+				<p>The Deployment container image and replica count are defined at creation time but can be changed after creation.  Updating Deployments will be covered in Modules <a href="5-0.html">5</a> and <a href="5-0.html">6</a>.</p>
+
+				<p>We’ll use the Kubernetes command line interface <b>Kubectl</b> to create and manage a Deployment. Kubectl interacts with the cluster via the API. During this bootcamp you will learn the most common Kubectl commands needed to run your applications on a Kubernetes cluster.</p>
 
 				
 			</div>
-			<div class="col-md-1"></div>
+			<div class="col-md-4">
+				<div class="content__box content__box_fill">
+					<p><i> Applications need to be packaged into one of the supported container formats in order to be deployed on Kubernetes </i></p>
+				</div>
+			</div>
 		</div>
 
-		<br>
+		<div class="row">
+			<div class="col-md-8">
+				<p>In this bootcamp we’ll use a <a href="https://nodejs.org">NodeJS</a> application packaged in a Docker container. The source code and the Dockerfile are available at [url to github repo]. </p>
+				
+				<p>Now that you know what Deployments are, let’s go to the online tutorial and deploy our first app!</p>
+			
+			</div>
+		</div>
 		<br>
 
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-success" href="1-3-2.html" role="button">Next screen <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-success" href="2-2.html" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
