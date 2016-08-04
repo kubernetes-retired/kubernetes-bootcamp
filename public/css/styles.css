@@ -9840,6 +9840,14 @@ p a:hover
     background: #326de6;
 }
 
+@media screen and (max-width: 992px)
+{
+    .carousel-inner > .item
+    {
+        display: block;
+    }
+}
+
 .quiz__list
 {
     display: -webkit-box;
@@ -9853,10 +9861,31 @@ p a:hover
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+@media screen and (max-width: 992px)
+{
+    .quiz__list
+    {
+        display: block;
+
+        margin-top: 10px;
+    }
+}
 
 .quiz__var
 {
     width: 30%;
+}
+@media screen and (max-width: 992px)
+{
+    .quiz__var
+    {
+        width: auto;
+        margin: 40px 0 0;
+    }
+    .quiz__var:first-child
+    {
+        margin-top: 0;
+    }
 }
 
 .quiz__box
@@ -9902,49 +9931,59 @@ p a:hover
 
     display: none;
 }
-.quiz__var_open .quiz__box:before,
-.quiz__var_open .quiz__box:after
+.quiz__var_open .quiz__box:before
 {
     display: block;
 }
-
-.quiz__list_open .quiz__box
+.quiz__var_active .quiz__box:after
 {
-    cursor: default;
+    display: block;
+}
+@media screen and (max-width: 992px)
+{
+    .quiz__box
+    {
+        display: block;
+
+        height: auto;
+        padding: 20px 30px;
+
+        text-align: center;
+    }
 }
 
-.quiz__list_open .quiz__var_true .quiz__box
+.quiz__var_open.quiz__var_true .quiz__box
 {
     border-color: #19eb7d;
     box-shadow: inset 0 0 0 1px #19eb7d;
 }
-.quiz__list_open .quiz__var_true .quiz__box:before
+.quiz__var_open.quiz__var_true .quiz__box:before
 {
     display: block;
 
     background: url('../images/quiz_true.png?v=1470295618756') no-repeat 50% 50%;
     background-size: cover;
 }
-.quiz__list_open .quiz__var_true .quiz__box:after
+.quiz__var_open.quiz__var_true .quiz__box:after
 {
     content: 'Correct !';
 
     color: #19eb7d;
 }
 
-.quiz__list_open .quiz__var_false .quiz__box
+.quiz__var_open.quiz__var_false .quiz__box
 {
     border-color: #ee4036;
     box-shadow: inset 0 0 0 1px #ee4036;
 }
-.quiz__list_open .quiz__var_false .quiz__box:before
+.quiz__var_open.quiz__var_false .quiz__box:before
 {
     display: block;
 
     background: url('../images/quiz_false.png?v=1470295618756') no-repeat 50% 50%;
     background-size: cover;
 }
-.quiz__list_open .quiz__var_false .quiz__box:after
+.quiz__var_open.quiz__var_false .quiz__box:after
 {
     content: 'Try again !';
 
@@ -9957,9 +9996,22 @@ p a:hover
 
     opacity: 0;
 }
-.quiz__list_open .quiz__note
+.quiz__var_open .quiz__note
 {
     opacity: 1;
+}
+@media screen and (max-width: 992px)
+{
+    .quiz__note
+    {
+        display: none;
+
+        margin: 0 0 20px;
+    }
+    .quiz__var_open .quiz__note
+    {
+        display: block;
+    }
 }
 
 .carousel-control

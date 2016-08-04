@@ -4,6 +4,22 @@ $(function() {
 		$('body').toggleClass('page_open');
 	});
 
+	$(window).scroll(function() {
+		var windscroll = $(window).scrollTop();
+		if (windscroll > 0) {
+			$('.scrolltop').addClass('scrolltop_active');
+		} else {
+			$('.scrolltop').removeClass('scrolltop_active');
+		}
+	}).scroll();
+
+	$('.scrolltop').click(function(){
+		$('html, body').animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 500);
+		return false;
+	});
+
 });
 
 
@@ -11,48 +27,48 @@ $(function() {
 $(function() {
 
 	var quizMockData = [{
-		text	: 'At its core, Kubernetes is a platform for:',
+		text	: 'At it’s core, Kubernetes is a platform for:',
 		answers : [{
-			text		: 'Provisioning machines (similar to Puppet, Ansible)',
-			note		: 'Kubernetes can schedule workloads on the cluster nodes but it is not a machine provisioning tool.',
-			isCorrect	: false
+			text		: 'Managing servers',
+			note		: 'The tool you’ll use to package your software will be Docker or rkt.',
+			isCorrect	: true
 		},{
 			text		: 'Running and scheduling container applications on a cluster',
-			note		: 'Kubernetes allows you to orchestrate and manage containers on distributed systems',
-			isCorrect	: true
+			note		: 'Kubernetes allows you to orchestrate and manage containers on distributed systems.',
+			isCorrect	: false
 		},{
 			text		: 'Packaging software in containers',
-			note		: 'The tool you’ll use to package your software will be Docker or rkt.',
+			note		: 'Kubernetes can schedule workload on the cluster nodes but it is not a server management tool.',
 			isCorrect	: false
 		}],
 	},{
-		text	: 'In Kubernetes, a node is:',
+		text	: 'Question 2 text text text',
 		answers : [{
-			text		: 'A tool for starting a kubernetes cluster on a local machine',
-			note		: 'You can start a Kubernetes cluster using minikube',
+			text		: 'Answer 1',
+			note		: 'Note for answer 1',
 			isCorrect	: false
 		},{
-			text		: 'A worker machine',
-			note		: 'The Kubernetes nodes are the place where we’re going to deploy our applications',
+			text		: 'Answer 2',
+			note		: 'Note for answer 2',
+			isCorrect	: false
+		},{
+			text		: 'Answer 3',
+			note		: 'Note for answer 3',
 			isCorrect	: true
-		},{
-			text		: 'A machine that coordinates the scheduling and management of application containers on the cluster',
-			note		: 'The Master is coordinating the Kubernetes cluster',
-			isCorrect	: false
 		}],
 	},{
-		text	: 'What can you deploy on Kubernetes?',
+		text	: 'Question 3 text text text',
 		answers : [{
-			text		: 'Containers',
-			note		: 'Kubernetes supports Docker, rkt and other types of containers',
+			text		: 'Answer 1',
+			note		: 'Note for answer 1',
 			isCorrect	: true
 		},{
-			text		: 'Virtual machines',
-			note		: 'Kubernetes (on its own) cannot deploy virtual machines',
+			text		: 'Answer 2',
+			note		: 'Note for answer 2',
 			isCorrect	: false
 		},{
-			text		: 'System processes (like sshd, httpd)',
-			note		: 'Kubernetes (on its own) cannot deploy system processes',
+			text		: 'Answer 3',
+			note		: 'Note for answer 3',
 			isCorrect	: false
 		}],
 	}]
@@ -64,9 +80,9 @@ $(function() {
 								<div class="item {{ i === 0 ? "active" : "" }}">\
 									<div class="row">\
 										<div class="col-md-12">\
-											<h2>Question {{ ++i }}</h2>\
+											<h2>Question {{ i + 1 }}</h2>\
 											<p>{{ text }}</p>\
-											<p style="color: #3771e3;"><i><big>Select one answer</big></i></p>\
+											<p style="color: #3771e3;"><i>Select one answer</i></p>\
 										</div>\
 									</div>\
 									<div class="quiz__list {{ answered ? "quiz__list_open" : "" }}">\
@@ -105,8 +121,12 @@ $(function() {
 
 	$('.quiz__var').on('click', function(){
 		var thisVar = $(this);
-		if (!thisVar.parents().hasClass('quiz__list_open')) {
-			thisVar.addClass('quiz__var_open').closest('.quiz__list').addClass('quiz__list_open');;
+		var thisVarParent = thisVar.closest('.quiz__list');
+		if (!thisVar.parents().hasClass('quiz__list_ready')) {
+			thisVar.addClass('quiz__var_open').addClass('quiz__var_active').siblings().removeClass('quiz__var_active');
+			if (!thisVar.hasClass('quiz__var_false')) {
+				thisVarParent.addClass('quiz__list_ready');
+			}
 		}
 	});
 
@@ -115,3 +135,5 @@ $(function() {
 	})
 
 });
+
+
