@@ -95,51 +95,51 @@ $(function() {
 			note		: 'Deployments allow application containers  to be redeployed in case of failure',
 			isCorrect	: false
 		},{
-			text		: 'A deployment is responsible for managing the desired state of your applications',
-			note		: 'A deployment is responsible for creating and updating instances of your application',
+			text		: 'A Deployment is responsible for managing the desired state of your applications',
+			note		: 'A Deployment is responsible for creating and updating instances of your application',
 			isCorrect	: true
 		},{
 			text		: 'A type of Kubernetes host',
-			note		: 'The k8s hosts are master and nodes. Deployments will run on nodes',
+			note		: 'The Kubernetes hosts are Master and Nodes. Deployments will run on Nodes',
 			isCorrect	: false
 		}],
 	},{
 		text	: 'What command would you use to create a Deployment?',
 		answers : [{
-			text		: 'Kubectl get deployments',
+			text		: '"kubectl get deployments"',
 			note		: 'This get command will only list the existing Deployments',
 			isCorrect	: false
 		},{
-			text		: 'Kubectl get nodes',
-			note		: 'This get command will only list the available nodes where you can deploy applications',
+			text		: '"kubectl get nodes"',
+			note		: 'This get command will only list the available Nodes where you can deploy applications',
 			isCorrect	: false
 		},{
-			text		: 'Kubectl run',
+			text		: '"kubectl run"',
 			note		: 'run is the command that will create a new deployment',
 			isCorrect	: true
 		}],
 	}]
 
 		var quizDataM3 = [{
-		text	: 'What is a pod?',
+		text	: 'What is a Pod?',
 		answers : [{
 			text		: 'A host machine where containers are deployed',
-			note		: 'The machines where we deploy pods are called nodes',
+			note		: 'The machines where we deploy Pods are called Nodes',
 			isCorrect	: false
 		},{
 			text		: 'A Kubernetes primitive responsible for deploying and scheduling application containers',
-			note		: 'A deployment is responsible for creating and updating the instances of your application containers',
+			note		: 'A Deployment is responsible for creating and updating the instances of your application containers',
 			isCorrect	: false
 		},{
 			text		: 'A group of one or more application containers that include shared volume and IP address',
-			note		: 'In Kubernetes all containers are deployed inside pods',
+			note		: 'In Kubernetes all containers are deployed inside Pods',
 			isCorrect	: true
 		}],
 	},{
-		text	: 'What is a node?',
+		text	: 'What is a Node?',
 		answers : [{
 			text		: 'A group of one or more containers deployed on Kubernetes',
-			note		: 'a Pod is a group of one or more containers deployed on a Node',
+			note		: 'A Pod is a group of one or more containers deployed on a Node',
 			isCorrect	: false
 		},{
 			text		: 'A Node is a worker machine in Kubernetes',
@@ -147,14 +147,14 @@ $(function() {
 			isCorrect	: true
 		},{
 			text		: 'A Node is a machine that coordinates the cluster',
-			note		: ' Masters are the machines that are coordinating the Kubernetes cluster',
+			note		: 'Masters are the machines that are coordinating the Kubernetes cluster',
 			isCorrect	: false
 		}],
 	},{
 		text	: 'What would be  the result of this command: “kubectl exec -ti my_pod_name bash”',
 		answers : [{
-			text		: 'Get the list of pods',
-			note		: 'To get the list of pods you need to run the "get pods" command',
+			text		: 'Get the list of Pods',
+			note		: 'To get the list of Pods you need to run the "get pods" command',
 			isCorrect	: false
 		},{
 			text		: 'Open a console on the first container inside the my_pod_name',

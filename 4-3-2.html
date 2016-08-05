@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1470121828969">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1469803628265">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469803628265" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -48,7 +48,6 @@
 	
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
-    <script src='./public/js/ractive.js'></script>
 	<script src="./public/js/common.js"></script>
 
 </head>
@@ -64,8 +63,8 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.svg?v=1470121828969" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121828969" alt="">
+		<img class="header__logo" src="./public/images/logo.png?v=1469803628265" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469803628265" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
@@ -92,37 +91,37 @@
 						2. Deploy an app
 					</a>
 				</li>
-				<li class="sidebar__subnav open marked">
+				<li class="marked">
 					<a href="3-0.html">
 						<span class="sidebar__ico"></span>
 						3. Explore your app
 					</a>
+				</li>
+				<li class="sidebar__subnav open marked">
+					<a href="4-0.html">
+						<span class="sidebar__ico"></span>
+						4. Expose your app publicly
+					</a>
 					<ul class="nav">
-						<li class="active">
-							<a href="3-1.html">
+						<li class="marked">
+							<a href="4-1.html">
 								<span class="sidebar__ico"></span>
-								Pods and Nodes
+								Services
 							</a>
 						</li>
-						<li>
-							<a href="3-2.html">
+						<li class="marked">
+							<a href="4-2.html">
 								<span class="sidebar__ico"></span>
 								Try interactively
 							</a>
 						</li>
-						<li>
-							<a href="3-3.html">
+						<li class="marked active">
+							<a href="4-3.html">
 								<span class="sidebar__ico"></span>
 								Quiz
 							</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="4-0.html">
-						<span class="sidebar__ico"></span>
-						4. Expose your app publicly
-					</a>
 				</li>
 				<li>
 					<a href="5-0.html">
@@ -195,122 +194,58 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li><a href="3-0.html">Module 3 | Explore your app</a></li>
+					<li><a href="4-0.html">Module 4 | Expose your app publicly</a></li>
 				</ol>
 			</div>
 		</div>
 
-		<h1>Pods and Nodes</h1>
+		<h1>Services</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="3-0.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="4-3-1.html" role="button"><span class="btn__prev">‹</span> Back</a>
 			</div>
 		</div>
 
 		<br>
 		<br>
+		<h2 class="title-light">Congratulations!</h2>
+		
+		<p style="color: #3771e3;"><i><big>You’ve completed Module 4 of the Bootcamp</big></i></p>
 
+		<br>
 		<div class="row">
 			<div class="col-md-8">
-				<h2>Pods</h2>
-				<p>
-			In Module <a href="2-0.html">2</a>, the Deployment created a <b>Pod</b> which hosted your application instance. A Pod is a group of one or more application containers (such as Docker or rkt) that includes shared storage (volumes), a unique cluster IP address and information about how to run them (like container image version or specific ports). Containers within a Pod share an IP Address and port space. Containers of the same Pod are always co-located and co-scheduled, and run in a shared context on the same node. A Pod models an application-specific “logical host”  and contains one or more application containers which are relatively tightly coupled. An example of container that would fit on the same Pod with our the NodeJS app, would be a side container that feeds the data published by the webserver. In a pre-container world, they would have run on the same physical or virtual machine.</p>
-
-			<p>Pods are tied to the Node where they are deployed and remain there until termination (according to restart policy) or deletion. In case of a Node failure, new identical Pods will be deployed on other available Nodes.  The Pod is the atomic deployment unit on the Kubernetes platform. When we trigger a Deployment on Kubernetes, it will create Pods with containers inside them, not containers directly.</p>
+				<div class="content__award">
+					<img class="content__badge" src="./public/images/badge-03.svg?v=1469803628265" alt="">
+				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
-					<h3>Summary:</h3>
-					<ul>
-						<li>Pods</li>
-						<li>Nodes</li>
-						<li>Kubectl main commands</li>
-					</ul>
+					<h2 class="title-light" style="color: #3771e3;">Rate Module 4</h2>
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<a class="like" href="#" role="button">
+								<img src="./public/images/like.svg?v=1469803628265" alt=""><br>
+								Like
+							</a>
+						</div>
+						<div class="col-md-6 text-center">
+							<a class="dislike" href="#" role="button">
+								<img src="./public/images/dislike.svg?v=1469803628265" alt=""><br>
+								Disike
+							</a>
+						</div>
+					</div>
 				</div>
-				<div class="content__box content__box_fill">
-						<p><i>
-							A Pod is a group of one or more application containers (such as Docker or rkt) and includes shared storage (volumes), IP address and information about how to run them.
-						</i></p>
-				</div>
+				<button class="btn btn-lg btn-primary btn-primary_light" type="button" data-toggle="modal" data-target="#commentModal">Leave us a comment !</button>
 			</div>
 		</div>
 		<br>
 
 		<div class="row">
-			<div class="col-md-8">
-				<h2 style="color: #3771e3;">Pods overview</h2>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-8">
-				<p><img src="./public/images/module_03_pods.svg"></p>
-			</div>
-		</div>
-		<br>
-
-		<div class="row">
-			<div class="col-md-8">
-				<h2>Nodes</h2>
-				<p>Pods always run on <b>Nodes</b>. A Node is a worker machine in Kubernetes and may be a VM or a physical machine, depending on the cluster. Each Node runs Pods and is managed by the Master. On a Node you can have multiple pods. The scheduling of Pods  is performed automatically by the Master and this takes into account the available resources on the Nodes.</p>
-
-				<p>Every Kubernetes Node runs at least:</p>
-				<ul>
-					<li>A container runtime (like Docker, rkt) that will take care of pulling all your containers from a registry.</li>
-					<li>>Kubelet, that acts as a bridge between the Kubernetes Master and the Nodes; it manages the Pods and the containers running on a machine.</li
-				</ul>
-				
-			</div>
 			<div class="col-md-4">
-				<div class="content__box content__box_fill">
-					<p><i> Containers should only be scheduled together in a single Pod if they are tightly coupled and need to share resources such as disk. </i></p>
-				</div>
-			</div>
-		</div>
-
-		<br>
-
-		<div class="row">
-			<div class="col-md-8">
-				<h2 style="color: #3771e3;">Node overview</h2>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-8">
-				<p><img src="./public/images/module_03_nodes.svg"></p>
-			</div>
-		</div>
-		<br>
-
-		<div class="row">
-			<div class="col-md-8">
-				<h2>Troubleshooting with kubectl</h2>
-				<p>In Module <a href="2-0.html">2</a> we introduced the kubelet cli tool. We’ll use it in this module to get information about deployed applications and their environments. The most common operations can be done with the following kubectl commands:</p>
-				<ul>
-					<li><b>kubectl get</b> - list resources</li>
-					<li><b>kubectl describe</b> - show detailed information about a resource</li>
-					<li><b>kubectl logs</b> - print the logs from a container in a pod</li>
-					<li><b>kubectl exec</b> - execute a command on a container in a pod</li>
-				</ul>
-				
-				<p>Those commands will help you see when applications were deployed, what their current status is, where they are running and what their configuration is.</p>
-
-				<p>Now that we know more about our cluster components and the command line, let’s explore our application.</p>
-			
-			</div>
-			<div class="col-md-4">
-				<div class="content__box content__box_fill">
-					<p><i> A node is a worker machine in Kubernetes and may be a VM or physical machine, depending on the cluster. Multiple Pods can run on one Node. </i></p>
-				</div>
-			</div>
-		</div>
-		<br>
-
-		<div class="row">
-			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="3-2.html" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
+				<a class="btn btn-lg btn-block btn-success" href="5-0.html" role="button">Continue to Module 5 <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -365,6 +300,26 @@
 
 </div>
 
+
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel">
+	<div class="modal-dialog" role="document">
+		<form>
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="myModalLabel">
+						Sample question
+					</h2>
+				</div>
+				<div class="modal-body">
+					<textarea class="form-control" rows="5"></textarea>
+				</div>
+				<div class="modal-footer text-right">
+					<button type="submit" class="btn btn-lg btn-success">Send</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 
 
 </body>
