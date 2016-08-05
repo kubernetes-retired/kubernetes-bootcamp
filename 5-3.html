@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1469803628265">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469803628265" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1470121829034">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121829034" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -48,6 +48,7 @@
 	
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
+    <script src='./public/js/ractive.js'></script>
 	<script src="./public/js/common.js"></script>
 
 </head>
@@ -63,8 +64,8 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.png?v=1469803628265" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469803628265" alt="">
+		<img class="header__logo" src="./public/images/logo.svg?v=1470121829034" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121829034" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
@@ -97,37 +98,37 @@
 						3. Explore your app
 					</a>
 				</li>
-				<li class="sidebar__subnav open marked">
+				<li class="marked">
 					<a href="4-0.html">
 						<span class="sidebar__ico"></span>
 						4. Expose your app publicly
 					</a>
+				</li>
+				<li class="sidebar__subnav open marked">
+					<a href="5-0.html">
+						<span class="sidebar__ico"></span>
+						5. Scale up your app
+					</a>
 					<ul class="nav">
 						<li class="marked">
-							<a href="4-1.html">
+							<a href="5-1.html">
 								<span class="sidebar__ico"></span>
-								Services
+								Running multiple instances of an app
 							</a>
 						</li>
 						<li class="marked">
-							<a href="4-2.html">
+							<a href="5-2.html">
 								<span class="sidebar__ico"></span>
 								Try interactively
 							</a>
 						</li>
 						<li class="marked active">
-							<a href="4-3.html">
+							<a href="5-3.html">
 								<span class="sidebar__ico"></span>
 								Quiz
 							</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="5-0.html">
-						<span class="sidebar__ico"></span>
-						5. Scale up your app
-					</a>
 				</li>
 				<li class="sidebar__subnav">
 					<a href="6-0.html">
@@ -194,58 +195,31 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li><a href="4-0.html">Module 4 | Expose your app publicly</a></li>
+					<li><a href="5-0.html">Module 5 | Scale up your app</a></li>
 				</ol>
 			</div>
 		</div>
 
-		<h1>Services</h1>
+		<h1>Running multiple instances of an app</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="4-3-1.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="5-2.html" role="button"><span class="btn__prev">‹</span> Back</a>
 			</div>
 		</div>
 
 		<br>
-		<br>
-		<h2 class="title-light">Congratulations!</h2>
-		
-		<p style="color: #3771e3;"><i><big>You’ve completed Module 4 of the Bootcamp</big></i></p>
-
-		<br>
 		<div class="row">
-			<div class="col-md-8">
-				<div class="content__award">
-					<img class="content__badge" src="./public/images/badge-04.svg?v=1469803628265" alt="">
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="content__box content__box_lined">
-					<h2 class="title-light" style="color: #3771e3;">Rate Module 4</h2>
-					<div class="row">
-						<div class="col-md-6 text-center">
-							<a class="like" href="#" role="button">
-								<img src="./public/images/like.svg?v=1469803628265" alt=""><br>
-								Like
-							</a>
-						</div>
-						<div class="col-md-6 text-center">
-							<a class="dislike" href="#" role="button">
-								<img src="./public/images/dislike.svg?v=1469803628265" alt=""><br>
-								Disike
-							</a>
-						</div>
-					</div>
-				</div>
-				<button class="btn btn-lg btn-primary btn-primary_light" type="button" data-toggle="modal" data-target="#commentModal">Leave us a comment !</button>
+			<div class="col-md-5">
+				<h2>Quiz</h2>
+				<p style="color: #3771e3;"><b><i><big>Take the Kubernetes Bootcamp Quiz to find out what you learnt in Module 5</big></i></b></p>
 			</div>
 		</div>
 		<br>
 
 		<div class="row">
-			<div class="col-md-4">
-				<a class="btn btn-lg btn-block btn-success" href="5-0.html" role="button">Continue to Module 5 <span class="btn__next">›</span></a>
+			<div class="col-md-12">
+				<a class="btn btn-lg btn-success" href="5-3-1.html" role="button">Begin! <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -300,26 +274,6 @@
 
 </div>
 
-
-<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel">
-	<div class="modal-dialog" role="document">
-		<form>
-			<div class="modal-content">
-				<div class="modal-header">
-					<h2 class="modal-title" id="myModalLabel">
-						Sample question
-					</h2>
-				</div>
-				<div class="modal-body">
-					<textarea class="form-control" rows="5"></textarea>
-				</div>
-				<div class="modal-footer text-right">
-					<button type="submit" class="btn btn-lg btn-success">Send</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
 
 
 </body>

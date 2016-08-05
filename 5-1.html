@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1469803628265">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469803628265" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1470121828969">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -48,6 +48,7 @@
 	
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
+    <script src='./public/js/ractive.js'></script>
 	<script src="./public/js/common.js"></script>
 
 </head>
@@ -63,14 +64,15 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.png?v=1469803628265" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469803628265" alt="">
+		<img class="header__logo" src="./public/images/logo.svg?v=1470121828969" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121828969" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
 		<div class="header__burger"></div>
 	</div>
 </header>
+
 
 			<ul class="nav">
 				<li class="marked">
@@ -97,37 +99,37 @@
 						3. Explore your app
 					</a>
 				</li>
-				<li class="sidebar__subnav open marked">
+				<li class="marked">
 					<a href="4-0.html">
 						<span class="sidebar__ico"></span>
 						4. Expose your app publicly
 					</a>
+				</li>
+				<li class="sidebar__subnav open marked">
+					<a href="5-0.html">
+						<span class="sidebar__ico"></span>
+						5. Scale up your app
+					</a>
 					<ul class="nav">
-						<li class="marked">
-							<a href="4-1.html">
+						<li class="marked active">
+							<a href="5-1.html">
 								<span class="sidebar__ico"></span>
-								Services
+								Running multiple instances of an app
 							</a>
 						</li>
-						<li class="marked">
-							<a href="4-2.html">
+						<li>
+							<a href="5-2.html">
 								<span class="sidebar__ico"></span>
 								Try interactively
 							</a>
 						</li>
-						<li class="marked active">
-							<a href="4-3.html">
+						<li>
+							<a href="5-3.html">
 								<span class="sidebar__ico"></span>
 								Quiz
 							</a>
 						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="5-0.html">
-						<span class="sidebar__ico"></span>
-						5. Scale up your app
-					</a>
 				</li>
 				<li class="sidebar__subnav">
 					<a href="6-0.html">
@@ -194,58 +196,84 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li><a href="4-0.html">Module 4 | Expose your app publicly</a></li>
+					<li><a href="5-0.html">Module 5 | Scale up your app</a></li>
 				</ol>
 			</div>
 		</div>
 
-		<h1>Services</h1>
+		<h1>Running multiple instances of an app</h1>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="4-3-1.html" role="button"><span class="btn__prev">‹</span> Back</a>
+				<a class="btn btn-default" href="5-0.html" role="button"><span class="btn__prev">‹</span> Back</a>
 			</div>
 		</div>
 
 		<br>
 		<br>
-		<h2 class="title-light">Congratulations!</h2>
-		
-		<p style="color: #3771e3;"><i><big>You’ve completed Module 4 of the Bootcamp</big></i></p>
 
-		<br>
 		<div class="row">
 			<div class="col-md-8">
-				<div class="content__award">
-					<img class="content__badge" src="./public/images/badge-04.svg?v=1469803628265" alt="">
-				</div>
+			<p>In the previously modules we created a <a href="http://kubernetes.io/docs/user-guide/deployments/"> Deployment</a>, and then exposed it publicly via a <a href="http://kubernetes.io/docs/user-guide/services/"> Service </a>. The Deployment created  only one Pod for running our application.  When traffic increases, we will need to scale the application to keep up with  user demand.</p>
+
+			<p><b>Scaling</b> is accomplished by changing the number of replicas in a Deployment</p>
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
-					<h2 class="title-light" style="color: #3771e3;">Rate Module 4</h2>
-					<div class="row">
-						<div class="col-md-6 text-center">
-							<a class="like" href="#" role="button">
-								<img src="./public/images/like.svg?v=1469803628265" alt=""><br>
-								Like
-							</a>
-						</div>
-						<div class="col-md-6 text-center">
-							<a class="dislike" href="#" role="button">
-								<img src="./public/images/dislike.svg?v=1469803628265" alt=""><br>
-								Disike
-							</a>
-						</div>
-					</div>
+					<h3>Summary:</h3>
+					<ul>
+						<li>Scaling a Deployment</li>
+					</ul>
 				</div>
-				<button class="btn btn-lg btn-primary btn-primary_light" type="button" data-toggle="modal" data-target="#commentModal">Leave us a comment !</button>
+				<div class="content__box content__box_fill">
+					<p><i> You can create from the start a Deployment with multiple instances using the --replicas parameter for the kubectl run command </i></p>
+				</div>
 			</div>
 		</div>
 		<br>
 
 		<div class="row">
+			<div class="col-md-8">
+				<h2 style="color: #3771e3;">Scaling overview</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8">
+				<p><img src="./public/images/module_05_scaling1.svg"></p>
+				<p><img src="./public/images/module_05_scaling2.svg"></p>
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+
+				<p>Scaling up a Deployment will ensure new Pods are created and scheduled to Nodes with available resources. Scaling down will reduce the number of Pods to the new desired state. Kubernetes also supports <a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/"> autoscaling </a> of Pods, but it is outside of the scope of this tutorial. Scaling to zero is also possible, and it will terminate all Pods of the specified Deployment.</p>
+
+				<p>Running multiple instances of an application will require a way to distribute the traffic to all of them. Services have an integrated load-balancer that will distribute network traffic to all Pods of an exposed Deployment. Services will monitor continuously the running Pods using endpoints, to ensure the traffic is sent only to available Pods.</p> 
+				
+			</div>
 			<div class="col-md-4">
-				<a class="btn btn-lg btn-block btn-success" href="5-0.html" role="button">Continue to Module 5 <span class="btn__next">›</span></a>
+				<div class="content__box content__box_fill">
+					<p><i>Scaling is accomplished by changing the number of replicas in a Deployment.</i></p>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+				<p> Once you have multiple instances of an Application running, you would be able to do Rolling updates without downtime. We’ll cover that in the next module. Now, let’s go to the online terminal and scale our application.</p>	
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-12">
+				<a class="btn btn-lg btn-success" href="5-2.html" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
 			</div>
 		</div>
 
@@ -300,26 +328,6 @@
 
 </div>
 
-
-<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel">
-	<div class="modal-dialog" role="document">
-		<form>
-			<div class="modal-content">
-				<div class="modal-header">
-					<h2 class="modal-title" id="myModalLabel">
-						Sample question
-					</h2>
-				</div>
-				<div class="modal-body">
-					<textarea class="form-control" rows="5"></textarea>
-				</div>
-				<div class="modal-footer text-right">
-					<button type="submit" class="btn btn-lg btn-success">Send</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
 
 
 </body>
