@@ -26,8 +26,8 @@
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
 	
-	<link rel="manifest" href="./manifest.json?v=1469803628195">
-	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1469803628195" color="#A2B2F2">
+	<link rel="manifest" href="./manifest.json?v=1470121828992">
+	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828992" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
 	
 	<meta name="theme-color" content="#A2B2F2">
@@ -44,10 +44,11 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
+	<script src="https://katacoda.com/embed.js"></script>
 	
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
+    <script src='./public/js/ractive.js'></script>
 	<script src="./public/js/common.js"></script>
 
 </head>
@@ -63,8 +64,8 @@
 
 			<header class="header">
 	<a class="header__site" href="index.html">
-		<img class="header__logo" src="./public/images/logo.png?v=1469803628195" alt="">
-		<img class="header__logo-mobile" src="./public/images/logo.png?v=1469803628195" alt="">
+		<img class="header__logo" src="./public/images/logo.svg?v=1470121828992" alt="">
+		<img class="header__logo-mobile" src="./public/images/logo_2.svg?v=1470121828992" alt="">
 		<span class="header__name">Bootcamp</span>
 	</a>
 	<div class="header__sider">
@@ -72,7 +73,7 @@
 	</div>
 </header>
 
-		<ul class="nav">
+			<ul class="nav">
 				<li class="marked">
 					<a href="index.html">
 						<span class="sidebar__ico"></span>
@@ -103,19 +104,19 @@
 						4. Expose your app publicly
 					</a>
 				</li>
-				<li class="sidebar__subnav open marked active">
+				<li class="sidebar__subnav open marked">
 					<a href="5-0.html">
 						<span class="sidebar__ico"></span>
 						5. Scale up your app
 					</a>
 					<ul class="nav">
-						<li>
+						<li class="marked">
 							<a href="5-1.html">
 								<span class="sidebar__ico"></span>
 								Running multiple instances of an app
 							</a>
 						</li>
-						<li>
+						<li class="marked active">
 							<a href="5-2.html">
 								<span class="sidebar__ico"></span>
 								Try interactively
@@ -183,9 +184,6 @@
 	</aside>
 
 
-
-	
-
 	<main class="content">
 		<div class="content__sider">
 			<a class="content__trigger" href="#" role="button"></a>
@@ -194,8 +192,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<ol class="breadcrumb">
-					<li class="active">Module 5</li>
-					<li><a href="index.html">Duration: 10 mins</a></li>
+					<li class="active"><a href="5-0.html">Module 5 | Scale up your app</a></li>
 				</ol>
 			</div>
 		</div>
@@ -204,44 +201,28 @@
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<a class="btn btn-default" href="4-3.html" role="button"><span class="btn__prev">‹</span> Back</a>
-			</div>
-		</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<div class="col-md-8">
-				<h3>Module overview</h3>
-				<ul style="color: #3771e3;">
-					<li><i>Scaling an app with Kubectl</i></li>
-				</ul>
-				<br>
-				<p><img src="./public/images/module_05.svg?v=1469803628347"></p>
-			</div>
-			<div class="col-md-4">
-				<div class="content__box content__box_lined">
-					<h3>What you need to know first</h3>
-					<p>
-						What are <a href="2-0.html">Deployments</a> <br>
-						What are <a href="4-0.html">Services</a> 
-					</p>
-				</div>
+				<a class="btn btn-default" href="5-1.html" role="button"><span class="btn__prev">‹</span> Back</a>
 			</div>
 		</div>
 		<br>
-		<br>
-		<br>
-
+		<div class="katacoda">
+			<div class="katacoda__alert">
+				To interact with the Terminal, please use the desktop/tablet version
+			</div>
+			<div class="katacoda__box" id="inline-terminal-1"  data-katacoda-id="kubernetes-bootcamp/6" data-katacoda-color="326de6" data-katacoda-secondary="273d6d" data-katacoda-hideintro="false" data-katacoda-font="Roboto" data-katacoda-fontheader="Roboto Slab" data-katacoda-prompt="Kubernetes Bootcamp Terminal" style="height: 600px;">
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-lg btn-success" href="5-1.html" role="button">Start Module 5 <span class="btn__next">›</span></a>
+        <p>
+          Finished? Test your knowledge in the quiz.
+        </p>
+				<a class="btn btn-lg btn-success" href="5-3.html" role="button">Module 5 quiz<span class="btn__next">›</span></a>
 			</div>
 		</div>
 
-
 	</main>
+
 
 
 
