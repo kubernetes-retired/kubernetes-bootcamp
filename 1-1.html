@@ -214,12 +214,12 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p>
-				<b>Kubernetes is designed as a highly available cluster of computers that are connected to work as a single unit.</b> This abstraction allows us to deploy applications without thinking about which specific machines they need to run on. To make use of this new model of deployment, applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized. This is different compared to how applications were deployed in the past, when they were directly installed on specific machines as packages deeply integrated into the host. <b>Kubernetes role is to automate the distribution (scheduling) of application containers across a cluster in an efficient way.</b> Kubernetes is an <a href="https://github.com/kubernetes/kubernetes">open-source</a> platform and is production-ready. 
+				<b>Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.</b> The abstractions in Kubernetes allow you to deploy containerized applications to a cluster without tying them specifically to individual machines. To make use of this new model of deployment, applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized. Containerized applications are more flexible and available than in past deployment models, where applications were installed directly onto specific machines as packages deeply integrated into the host. <b>Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.</b> Kubernetes is an <a href="https://github.com/kubernetes/kubernetes">open-source</a> platform and is production-ready. 
 				</p>
-				<p>A Kubernetes cluster is formed out of 2 types of resources:
+				<p>A Kubernetes cluster consists of two types of resources:
 					<ul>
-			            <li><b>Master</b>  is coordinating the cluster</li>
-			            <li><b>Nodes</b> are where we run applications</li>
+			            <li>The <b>Master</b> coordinates the cluster</li>
+			            <li><b>Nodes</b> are the workers that run applications</li>
 			        </ul>
 			    </p>
 			</div>
@@ -256,8 +256,8 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p><b> The Master is responsible for managing the cluster.</b> The master nodes will coordinate all the activity happening in your cluster like scheduling applications, maintaining their desired state, scaling applications and rolling new updates.</p>
-				<p><b>A node is a VM or a physical computer that is used as a worker machine in a Kubernetes cluster.</b> Every node from the cluster is managed by the master. On a typical node you will have tools for handling container operations (like Docker, rkt) and Kubelet, an agent for managing the node. A Kubernetes cluster that handles production traffic should have a minimum of three nodes.</p>
+				<p><b>The Master is responsible for managing the cluster.</b> The master coordinates all activity in your cluster, such as scheduling applications, maintaining applications' desired state, scaling applications, and rolling out new updates.</p>
+				<p><b>A node is a VM or a physical computer that serves as a worker machine in a Kubernetes cluster.</b> Each node has a Kubelet, which is an agent for managing the node and communicating with the Kubernetes master. The node should also have tools for handling container operations, such as Docker or rkt. A Kubernetes cluster that handles production traffic should have a minimum of three nodes.</p>
 				
 			</div>
 			<div class="col-md-4">
@@ -269,11 +269,9 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p>When we deploy applications on Kubernetes we tell the master to start our containers and it will schedule them to run on some node agents. <b>Communications between the master and the nodes is done via an API exposed by the master. </b> The same API is exposed towards the users in order to facilitate interaction with the cluster.</p>
+				<p>When you deploy applications on Kubernetes, you tell the master to start the application containers. The master schedules the containers to run on the cluster's nodes. <b>The nodes communicate with the master using the Kubernetes API</b>, which the master exposes. End users can also use the Kubernetes API directly to interact with the cluster.</p>
 			
-				<p>A Kubernetes cluster can be deployed on either physical or virtual machines. The recommended way to start a Kubernetes cluster for development purposes is by using  <a href="https://github.com/kubernetes/minikube">minikube</a>.  Minikube creates a VM on your local machine and deploys a simple cluster containing only one node. Minikube is available for Linux, Mac OS  and Windows systems. The minikube CLI provides basic bootstrapping operations such as: start, stop, status and delete. During this bootcamp we’ll use an online terminal with minikube pre-installed.</p>
-
-				<p>The name Kubernetes originates from Greek, meaning “helmsman” or “pilot”, and is the root of the words “governor” and “cybernetic”. K8s is an abbreviation obtained by replacing the 8 letters “ubernete” with 8.</p>
+				<p>A Kubernetes cluster can be deployed on either physical or virtual machines. To get started with Kubernetes development, you can use <a href="https://github.com/kubernetes/minikube">minikube</a>.  Minikube is a is a lightweight Kubernetes implmentation that creates a VM on your local machine and deploys a simple cluster containing only one node. Minikube is available for Linux, Mac OS  and Windows systems. The minikube CLI provides basic bootstrapping operations for working with your cluster, including start, stop, status, and delete. For this bootcamp, however, you'll use a provided online terminal with minikube pre-installed.</p>
 
 				<p>Now that you know what Kubernetes is, let’s go to the online tutorial and start our first cluster!</p>
 				
