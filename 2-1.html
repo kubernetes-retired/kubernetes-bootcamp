@@ -214,12 +214,12 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p>
-				Once you have a running Kubernetes cluster, the next step is to deploy your containerized applications on top of it. In Kubernetes, a <b>Deployment</b> is responsible for creating and updating instances of your application. The master will schedule application instances created by the deployment onto Nodes.
+				Once you have a running Kubernetes cluster, you can deploy your containerized applications on top of it. To do so, you create a Kubernetes <b>Deployment</b>. The Deployment is responsible for creating and updating instances of your application. Once you've created a Deployment, the Kubernetes master schedules the application instances that the Deployment creates onto individual Nodes in the cluster.
 				</p>
 
-				<p>After creating application instances, a Deployment Controller continuously watches them, and replaces an instance if the Node hosting it goes down or it is deleted. <b>This provides a self-healing mechanism to address machine failure and machine maintenance. </b></p>
+				<p>Once the application instances are created, a Kubernetes Deployment Controller continuously monitors those instances. The Deployment controller replaces an instance if the Node hosting it goes down or it is deleted. <b>This provides a self-healing mechanism to address machine failure or maintenance.</b></p>
 
-				<p>In a pre-orchestration world, installation scripts would often be used to start applications, but they did not allow recovery from machine failure.  By both creating your application instances and keeping them running across Nodes, Deployments provide a fundamentally different approach to application management. </p>
+				<p>In a pre-orchestration world, installation scripts would often be used to start applications, but they did not allow recovery from machine failure.  By both creating your application instances and keeping them running across Nodes, Kubernetes Deployments provide a fundamentally different approach to application management. </p>
 
 				
 				
@@ -258,9 +258,11 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<p>The Deployment container image and replica count are defined at creation time but can be changed after creation.  Updating Deployments will be covered in Modules <a href="5-0.html">5</a> and <a href="5-0.html">6</a>.</p>
+                <p>You can create and manage a Deployment by using the Kubernetes command line interface, <b>Kubectl</b>. Kubectl uses the Kubernetes API to interact with the cluster. In this module, you'll learn the most common Kubectl commands needed to create Deployments that run your applications on a Kubernetes cluster.</p>
 
-				<p>We’ll use the Kubernetes command line interface <b>Kubectl</b> to create and manage a Deployment. Kubectl interacts with the cluster via the API. During this bootcamp you will learn the most common Kubectl commands needed to run your applications on a Kubernetes cluster.</p>
+				<p>When you create a Deployment, you'll need to specify the container image for your application and the number of replicas that you want to run. You can change that information later by updating your Deployment; Modules <a href="5-0.html">5</a> and <a href="5-0.html">6</a> of the bootcamp discuss how you can update your Deployments.</p>
+
+				
 
 				
 			</div>
@@ -273,7 +275,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p>In this bootcamp we’ll use a <a href="https://nodejs.org">NodeJS</a> application packaged in a Docker container. The source code and the Dockerfile are available at [url to github repo]. </p>
+				<p>For our first Deployment, we’ll use a <a href="https://nodejs.org">NodeJS</a> application packaged in a Docker container. The source code and the Dockerfile are available in the <a href="https://github.com/kubernetes/kubernetes-bootcamp">GitHub respository</a> for the Kubernetes Bootcamp.</p>
 				
 				<p>Now that you know what Deployments are, let’s go to the online tutorial and deploy our first app!</p>
 			
