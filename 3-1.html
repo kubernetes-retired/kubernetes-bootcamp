@@ -214,10 +214,16 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h2>Pods</h2>
-				<p>
-			In Module <a href="2-0.html">2</a>, the Deployment created a <b>Pod</b> which hosted your application instance. A Pod is a group of one or more application containers (such as Docker or rkt) that includes shared storage (volumes), a unique cluster IP address and information about how to run them (like container image version or specific ports). Containers within a Pod share an IP Address and port space. Containers of the same Pod are always co-located and co-scheduled, and run in a shared context on the same node. A Pod models an application-specific “logical host”  and contains one or more application containers which are relatively tightly coupled. An example of container that would fit on the same Pod with our the NodeJS app, would be a side container that feeds the data published by the webserver. In a pre-container world, they would have run on the same physical or virtual machine.</p>
+				<p>When you created a Deployment in Module <a href="2-0.html">2</a>, Kubernetes created a <b>Pod</b> to host your application instance. A Pod is Kubernetes abstraction that represents a group of one or more application containers (such as Docker or rkt), and some shared resources for those containers. Those resources include:</p>
+				<ul>
+					<li>Shared storage, as Volumes</li>
+					<li>Networking, as a unique cluster IP address</li>
+					<li>Information about how to run each container, such as the container image version or specific ports to use</li>
+				</ul> 
+				<p>A Pod models an application-specific “logical host” and can contain different application containers which are relatively tightly coupled. For example, a Pod might include both the container with your NodeJS app as well as a different container that feeds the data to be published by the NodeJS webserver. The containers in a Pod share an IP Address and port space, are always co-located and co-scheduled, and run in a shared context on the same Node.</p>
 
-			<p>Pods are tied to the Node where they are deployed and remain there until termination (according to restart policy) or deletion. In case of a Node failure, new identical Pods will be deployed on other available Nodes.  The Pod is the atomic deployment unit on the Kubernetes platform. When we trigger a Deployment on Kubernetes, it will create Pods with containers inside them, not containers directly.</p>
+			<p>Pods are the atomic deployment unit on the Kubernetes platform. When we create a Deployment on Kubernetes, that Deployment creates Pods with containers inside them (as opposed to creating containers directly). Each Pod is tied to the Node where it is deployed, and remains there until termination (according to restart policy) or deletion. In case of a Node failure, identical Pods are deployed on other available Nodes in the cluster.</p>
+			
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_lined">
@@ -253,12 +259,12 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h2>Nodes</h2>
-				<p>Pods always run on <b>Nodes</b>. A Node is a worker machine in Kubernetes and may be a VM or a physical machine, depending on the cluster. Each Node runs Pods and is managed by the Master. On a Node you can have multiple pods. The scheduling of Pods  is performed automatically by the Master and this takes into account the available resources on the Nodes.</p>
+				<p>Pods always run on <b>Nodes</b>. A Node is a worker machine in Kubernetes and may be either a virtual or a physical machine, depending on the cluster. Each Node is managed by the Master. A Node can have multiple pods, and the Kubernetes master automatically handles scheduling the pods across the Nodes in the cluster. The Master's automatic scheduling takes into account the available resources on each Nodes.</p>
 
 				<p>Every Kubernetes Node runs at least:</p>
 				<ul>
-					<li>A container runtime (like Docker, rkt) that will take care of pulling all your containers from a registry.</li>
-					<li>Kubelet, that acts as a bridge between the Kubernetes Master and the Nodes; it manages the Pods and the containers running on a machine.</li
+					<li>Kubelet, a process responsible for communication between the Kubernetes Master and the Nodes; it manages the Pods and the containers running on a machine.</li>
+					<li>A container runtime (like Docker, rkt) responsible for pulling all of your containers from a registry.</li>
 				</ul>
 				
 			</div>
@@ -287,7 +293,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h2>Troubleshooting with kubectl</h2>
-				<p>In Module <a href="2-0.html">2</a> we introduced the kubelet cli tool. We’ll use it in this module to get information about deployed applications and their environments. The most common operations can be done with the following kubectl commands:</p>
+				<p>In Module <a href="2-0.html">2</a>, you used Kubectl command-line interface. You'll continue to use it in Module 3 to get information about deployed applications and their environments. The most common operations can be done with the following kubectl commands:</p>
 				<ul>
 					<li><b>kubectl get</b> - list resources</li>
 					<li><b>kubectl describe</b> - show detailed information about a resource</li>
@@ -295,7 +301,7 @@
 					<li><b>kubectl exec</b> - execute a command on a container in a pod</li>
 				</ul>
 				
-				<p>Those commands will help you see when applications were deployed, what their current status is, where they are running and what their configuration is.</p>
+				<p>You can use these commands to see when applications were deployed, what their current status is, where they are running and what their configuration is.</p>
 
 				<p>Now that we know more about our cluster components and the command line, let’s explore our application.</p>
 			
