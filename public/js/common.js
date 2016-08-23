@@ -1,7 +1,11 @@
 $(function() {
 
 	$('.content__trigger, .header__sider').on('click', function(){
-		$('body').toggleClass('page_open');
+		if($('body').width() > 1000) {
+ 			$('body').toggleClass('page_desktop_hide');
+ 		} else {
+ 			$('body').toggleClass('page_open');
+ 		}
 	});
 
 	$(window).scroll(function() {
