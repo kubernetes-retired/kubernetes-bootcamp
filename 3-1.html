@@ -222,7 +222,7 @@
 				</ul> 
 				<p>A Pod models an application-specific “logical host” and can contain different application containers which are relatively tightly coupled. For example, a Pod might include both the container with your NodeJS app as well as a different container that feeds the data to be published by the NodeJS webserver. The containers in a Pod share an IP Address and port space, are always co-located and co-scheduled, and run in a shared context on the same Node.</p>
 
-			<p>Pods are the atomic deployment unit on the Kubernetes platform. When we create a Deployment on Kubernetes, that Deployment creates Pods with containers inside them (as opposed to creating containers directly). Each Pod is tied to the Node where it is deployed, and remains there until termination (according to restart policy) or deletion. In case of a Node failure, identical Pods are deployed on other available Nodes in the cluster.</p>
+			<p>Pods are the atomic unit on the Kubernetes platform. When we create a Deployment on Kubernetes, that Deployment creates Pods with containers inside them (as opposed to creating containers directly). Each Pod is tied to the Node where it is scheduled, and remains there until termination (according to restart policy) or deletion. In case of a Node failure, identical Pods are scheduled on other available Nodes in the cluster.</p>
 			
 			</div>
 			<div class="col-md-4">
@@ -259,12 +259,12 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h2>Nodes</h2>
-				<p>Pods always run on <b>Nodes</b>. A Node is a worker machine in Kubernetes and may be either a virtual or a physical machine, depending on the cluster. Each Node is managed by the Master. A Node can have multiple pods, and the Kubernetes master automatically handles scheduling the pods across the Nodes in the cluster. The Master's automatic scheduling takes into account the available resources on each Nodes.</p>
+				<p>A Pod always runs on a <b>Node</b>. A Node is a worker machine in Kubernetes and may be either a virtual or a physical machine, depending on the cluster. Each Node is managed by the Master. A Node can have multiple pods, and the Kubernetes master automatically handles scheduling the pods across the Nodes in the cluster. The Master's automatic scheduling takes into account the available resources on each Node.</p>
 
 				<p>Every Kubernetes Node runs at least:</p>
 				<ul>
 					<li>Kubelet, a process responsible for communication between the Kubernetes Master and the Nodes; it manages the Pods and the containers running on a machine.</li>
-					<li>A container runtime (like Docker, rkt) responsible for pulling all of your containers from a registry.</li>
+					<li>A container runtime (like Docker, rkt) responsible for pulling the container image from a registry, unpacking the container, and running the application.</li>
 				</ul>
 				
 			</div>
