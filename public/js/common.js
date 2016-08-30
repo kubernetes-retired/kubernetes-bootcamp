@@ -298,7 +298,7 @@ $(function() {
 	},{
 		text	: 'What kubectl command can be used to do a Deployment update?',
 		answers : [{
-			text		: 'kubectl set image"',
+			text		: '"kubectl set image"',
 			note		: '"set image" can be used to update the image of an container',
 			isCorrect	: true
 		},{
