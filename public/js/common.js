@@ -298,15 +298,15 @@ $(function() {
 	},{
 		text	: 'What kubectl command can be used to do a Deployment update?',
 		answers : [{
-			text		: '"kubectl set image"',
-			note		: '"set image" can be used to update the image of an container',
+			text		: 'kubectl set image',
+			note		: '`set image` can be used to update the image of an container',
 			isCorrect	: true
 		},{
-			text		: '"kubectl rollout undo"',
+			text		: 'kubectl rollout undo',
 			note		: 'This is the command you would use to roll back  a deployment',
 			isCorrect	: false
 		},{
-			text		: '"kubectl rollout status"',
+			text		: 'kubectl rollout status',
 			note		: 'This is the command you would use to view the current status of  a deployment',
 			isCorrect	: false
 		}],
