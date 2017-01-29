@@ -283,15 +283,15 @@ $(function() {
 	},{
 		text	: 'If a Deployment is exposed publicly, what happens with the network traffic during an update?',
 		answers : [{
-			text		: 'Is dropped',
+			text		: 'The traffic is dropped',
 			note		: 'Rolling updates are rolled out with zero downtime',
 			isCorrect	: false
 		},{
-			text		: 'Is load-balanced only to the old instances',
+			text		: 'The traffic is load-balanced only to the old instances',
 			note		: 'Services are monitoring all the Pods of a Deployment',
 			isCorrect	: false
 		},{
-			text		: 'Is load-balanced only to available instances (old or new)',
+			text		: 'The traffic is load-balanced only to available instances (old or new)',
 			note		: 'If a Deployment is exposed publicly, the Service will load-balance the traffic only to available Pods during the update',
 			isCorrect	: true
 		}],
