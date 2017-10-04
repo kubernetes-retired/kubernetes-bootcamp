@@ -135,7 +135,7 @@ $(function() {
 			note		: 'A Deployment is responsible for creating and updating the instances of your application containers',
 			isCorrect	: false
 		},{
-			text		: 'A group of one or more application containers that include shared volume and IP address',
+			text		: 'A group of one or more application containers that share an IP address and volumes',
 			note		: 'In Kubernetes all containers are deployed inside Pods',
 			isCorrect	: true
 		}],
