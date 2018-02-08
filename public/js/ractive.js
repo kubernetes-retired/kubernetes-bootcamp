@@ -2945,7 +2945,7 @@
 
   	var listeners, n, eventNames;
 
-  	// allow mutliple listeners to be bound in one go
+  	// allow multiple listeners to be bound in one go
   	if (typeof eventName === "object") {
   		listeners = [];
 
@@ -5152,7 +5152,7 @@
 
   	// TODO if a section is empty it should be discarded. Don't do
   	// that here though - we need to clean everything up first, as
-  	// it may contain removeable whitespace. As a temporary measure,
+  	// it may contain removable whitespace. As a temporary measure,
   	// to pass the existing tests, remove empty `f` arrays
   	if (!section.f.length) {
   		delete section.f;
@@ -7296,7 +7296,7 @@
 
   function shared_unbind__unbind() {
   	if (this.registered) {
-  		// this was registered as a dependant
+  		// this was registered as a dependent
   		this.root.viewmodel.unregister(this.keypath, this);
   	}
 
@@ -12654,7 +12654,7 @@
   function getPartialTemplate(ractive, name, parentFragment) {
   	var partial;
 
-  	// If the partial in instance or view heirarchy instances, great
+  	// If the partial in instance or view hierarchy instances, great
   	if (partial = getPartialFromRegistry(ractive, name, parentFragment || {})) {
   		return partial;
   	}
