@@ -12,8 +12,8 @@ var handleRequest = function(request, response) {
   console.log("Running On:" ,host, "| Total Requests:", ++requests,"| App Uptime:", (new Date() - startTime)/1000 , "seconds", "| Log Time:",new Date());
 }
 var www = http.createServer(handleRequest);
-www.listen(8081,function () {
-    startTime = new Date();;
-    host = process.env.HOSTNAME;
-    console.log ("Kubernetes Bootcamp App Started At:",startTime, "| Running On: " ,host, "\n" );
+www.listen(8080,function () {
+  startTime = new Date();
+  host = process.env.HOSTNAME;
+  console.log ("Kubernetes Bootcamp App Started At:",startTime, "| Running On: " ,host, "\n" );
 });
