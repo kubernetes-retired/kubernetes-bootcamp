@@ -1703,7 +1703,7 @@
   			while (postRender && _batch.previousBatch) {
   				// this can't happen until the DOM has been fully updated
   				// otherwise in some situations (with components inside elements)
-  				// transitions and decorators will initialize prematurely
+  				// transitions and decorators will initialise prematurely
   				_batch = _batch.previousBatch;
   			}
 
@@ -11251,7 +11251,7 @@
   		}
   	}
 
-  	// Otherwise the value should be initialised according to which
+  	// Otherwise the value should be initialized according to which
   	// <option> element is selected, if twoway binding is in effect
   	else if (selectElement.binding) {
   		selectElement.binding.forceUpdate();
