@@ -2945,7 +2945,7 @@
 
   	var listeners, n, eventNames;
 
-  	// allow mutliple listeners to be bound in one go
+  	// allow multiple listeners to be bound in one go
   	if (typeof eventName === "object") {
   		listeners = [];
 
