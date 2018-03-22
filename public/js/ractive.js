@@ -2784,7 +2784,7 @@
   	observer.init(options.init);
   	ractive.viewmodel.register(keypath, observer, isPatternObserver ? "patternObservers" : "observers");
 
-  	// This flag allows observers to initialize even with undefined values
+  	// This flag allows observers to initialise even with undefined values
   	observer.ready = true;
 
   	var facade = {
@@ -10026,7 +10026,7 @@
   	this.attribute.isTwoway = true;
   	this.keypath = keypath;
 
-  	// initialise value, if it's undefined
+  	// initialize value, if it's undefined
   	value = this.root.viewmodel.get(keypath);
 
   	if (value === undefined && this.getInitialValue) {
