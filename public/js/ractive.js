@@ -2784,7 +2784,7 @@
   	observer.init(options.init);
   	ractive.viewmodel.register(keypath, observer, isPatternObserver ? "patternObservers" : "observers");
 
-  	// This flag allows observers to initialise even with undefined values
+  	// This flag allows observers to initialize even with undefined values
   	observer.ready = true;
 
   	var facade = {
