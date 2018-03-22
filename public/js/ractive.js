@@ -681,7 +681,7 @@
   // This function takes a keypath such as 'foo.bar.baz', and returns
   // all the variants of that keypath that include a wildcard in place
   // of a key, such as 'foo.bar.*', 'foo.*.baz', 'foo.*.*' and so on.
-  // These are then checked against the dependants map (ractive.viewmodel.depsMap)
+  // These are then checked against the dependents map (ractive.viewmodel.depsMap)
   // to see if any pattern observers are downstream of one or more of
   // these wildcard keypaths (e.g. 'foo.bar.*.status')
   var utils_getPotentialWildcardMatches = getPotentialWildcardMatches;
