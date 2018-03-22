@@ -1703,7 +1703,7 @@
   			while (postRender && _batch.previousBatch) {
   				// this can't happen until the DOM has been fully updated
   				// otherwise in some situations (with components inside elements)
-  				// transitions and decorators will initialise prematurely
+  				// transitions and decorators will initialize prematurely
   				_batch = _batch.previousBatch;
   			}
 
