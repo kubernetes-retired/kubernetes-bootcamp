@@ -12654,7 +12654,7 @@
   function getPartialTemplate(ractive, name, parentFragment) {
   	var partial;
 
-  	// If the partial in instance or view heirarchy instances, great
+  	// If the partial in instance or view hierarchy instances, great
   	if (partial = getPartialFromRegistry(ractive, name, parentFragment || {})) {
   		return partial;
   	}
