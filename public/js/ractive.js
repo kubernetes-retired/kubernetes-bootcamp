@@ -10026,7 +10026,7 @@
   	this.attribute.isTwoway = true;
   	this.keypath = keypath;
 
-  	// initialise value, if it's undefined
+  	// initialize value, if it's undefined
   	value = this.root.viewmodel.get(keypath);
 
   	if (value === undefined && this.getInitialValue) {
