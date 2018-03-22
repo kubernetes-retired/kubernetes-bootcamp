@@ -11251,7 +11251,7 @@
   		}
   	}
 
-  	// Otherwise the value should be initialised according to which
+  	// Otherwise the value should be initialized according to which
   	// <option> element is selected, if twoway binding is in effect
   	else if (selectElement.binding) {
   		selectElement.binding.forceUpdate();
