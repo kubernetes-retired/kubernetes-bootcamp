@@ -5,6 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Kubernetes Bootcamp</title>
+	<meta http-equiv="refresh" content="0;URL='https://kubernetes.io/docs/tutorials/kubernetes-basics/'" />
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,11 +26,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,8 +45,8 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -57,7 +58,9 @@
 
 <div class="layout" id="top">
 
-	
+	<div style="position: fixed;background: #ffff94;width: 100%;z-index: 1000;text-align: center;font-size: 1.5rem;font-weight: bold;">
+		This content has moved to <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/">https://kubernetes.io/docs/tutorials/kubernetes-basics/</a>
+	</div>
 
 	<aside class="sidebar">
 		<div class="sidebar__inner">
@@ -186,7 +189,7 @@
 
 
 
-	
+
 
 	<main class="content">
 		<div class="content__sider">
@@ -275,8 +278,8 @@
 
 				<p>Scaling up a Deployment will ensure new Pods are created and scheduled to Nodes with available resources. Scaling down will reduce the number of Pods to the new desired state. Kubernetes also supports <a href="http://kubernetes.io/docs/user-guide/horizontal-pod-autoscaling/"> autoscaling </a> of Pods, but it is outside of the scope of this tutorial. Scaling to zero is also possible, and it will terminate all Pods of the specified Deployment.</p>
 
-				<p>Running multiple instances of an application will require a way to distribute the traffic to all of them. Services have an integrated load-balancer that will distribute network traffic to all Pods of an exposed Deployment. Services will monitor continuously the running Pods using endpoints, to ensure the traffic is sent only to available Pods.</p> 
-				
+				<p>Running multiple instances of an application will require a way to distribute the traffic to all of them. Services have an integrated load-balancer that will distribute network traffic to all Pods of an exposed Deployment. Services will monitor continuously the running Pods using endpoints, to ensure the traffic is sent only to available Pods.</p>
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
@@ -289,7 +292,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p> Once you have multiple instances of an Application running, you would be able to do Rolling updates without downtime. We’ll cover that in the next module. Now, let’s go to the online terminal and scale our application.</p>	
+				<p> Once you have multiple instances of an Application running, you would be able to do Rolling updates without downtime. We’ll cover that in the next module. Now, let’s go to the online terminal and scale our application.</p>
 			</div>
 		</div>
 		<br>
@@ -305,7 +308,7 @@
 
 
 
-	
+
 		<!-- header start -->
 <footer class="footer" role="contentinfo">
 	<div class="footer__content">
@@ -347,7 +350,7 @@
 	</div>
 </footer>
 <!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+
 
 </div>
 

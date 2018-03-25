@@ -5,6 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Kubernetes Bootcamp</title>
+	<meta http-equiv="refresh" content="0;URL='https://kubernetes.io/docs/tutorials/kubernetes-basics/'" />
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,11 +26,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,8 +45,8 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -57,7 +58,9 @@
 
 <div class="layout" id="top">
 
-	
+	<div style="position: fixed;background: #ffff94;width: 100%;z-index: 1000;text-align: center;font-size: 1.5rem;font-weight: bold;">
+		This content has moved to <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/">https://kubernetes.io/docs/tutorials/kubernetes-basics/</a>
+	</div>
 
 	<aside class="sidebar">
 		<div class="sidebar__inner">
@@ -185,7 +188,7 @@
 
 
 
-	
+
 
 	<main class="content">
 		<div class="content__sider">
@@ -214,7 +217,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p>
-				<b>Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.</b> The abstractions in Kubernetes allow you to deploy containerized applications to a cluster without tying them specifically to individual machines. To make use of this new model of deployment, applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized. Containerized applications are more flexible and available than in past deployment models, where applications were installed directly onto specific machines as packages deeply integrated into the host. <b>Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.</b> Kubernetes is an <a href="https://github.com/kubernetes/kubernetes">open-source</a> platform and is production-ready. 
+				<b>Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.</b> The abstractions in Kubernetes allow you to deploy containerized applications to a cluster without tying them specifically to individual machines. To make use of this new model of deployment, applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized. Containerized applications are more flexible and available than in past deployment models, where applications were installed directly onto specific machines as packages deeply integrated into the host. <b>Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.</b> Kubernetes is an <a href="https://github.com/kubernetes/kubernetes">open-source</a> platform and is production-ready.
 				</p>
 				<p>A Kubernetes cluster consists of two types of resources:
 					<ul>
@@ -258,7 +261,7 @@
 			<div class="col-md-8">
 				<p><b>The Master is responsible for managing the cluster.</b> The master coordinates all activity in your cluster, such as scheduling applications, maintaining applications' desired state, scaling applications, and rolling out new updates.</p>
 				<p><b>A node is a VM or a physical computer that serves as a worker machine in a Kubernetes cluster.</b> Each node has a Kubelet, which is an agent for managing the node and communicating with the Kubernetes master. The node should also have tools for handling container operations, such as Docker or rkt. A Kubernetes cluster that handles production traffic should have a minimum of three nodes.</p>
-				
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
@@ -270,11 +273,11 @@
 		<div class="row">
 			<div class="col-md-8">
 				<p>When you deploy applications on Kubernetes, you tell the master to start the application containers. The master schedules the containers to run on the cluster's nodes. <b>The nodes communicate with the master using the Kubernetes API</b>, which the master exposes. End users can also use the Kubernetes API directly to interact with the cluster.</p>
-			
+
 				<p>A Kubernetes cluster can be deployed on either physical or virtual machines. To get started with Kubernetes development, you can use <a href="https://github.com/kubernetes/minikube">minikube</a>.  Minikube is a lightweight Kubernetes implmentation that creates a VM on your local machine and deploys a simple cluster containing only one node. Minikube is available for Linux, Mac OS  and Windows systems. The minikube CLI provides basic bootstrapping operations for working with your cluster, including start, stop, status, and delete. For this bootcamp, however, you'll use a provided online terminal with minikube pre-installed.</p>
 
 				<p>Now that you know what Kubernetes is, let’s go to the online tutorial and start our first cluster!</p>
-				
+
 			</div>
 		</div>
 		<br>
@@ -290,7 +293,7 @@
 
 
 
-	
+
 		<!-- header start -->
 <footer class="footer" role="contentinfo">
 	<div class="footer__content">
@@ -332,7 +335,7 @@
 	</div>
 </footer>
 <!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+
 
 </div>
 
