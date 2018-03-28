@@ -5,6 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Kubernetes Bootcamp</title>
+	<meta http-equiv="refresh" content="0;URL='https://kubernetes.io/docs/tutorials/kubernetes-basics/'" />
 	<meta name="description" content="K8S">
 	<meta name="keywords" content="K8S Keywords">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,11 +26,11 @@
 	<meta itemprop="description" content="K8S">
 	<meta itemprop="image" content="./public/uploads/soc_index.jpg">
 
-	
+
 	<link rel="manifest" href="./manifest.json?v=1470121828969">
 	<link rel="mask-icon" href="./public/images/safari-pinned-tab.svg?v=1470121828969" color="#A2B2F2">
 	<meta name="msapplication-TileColor" content="#A2B2F2">
-	
+
 	<meta name="theme-color" content="#A2B2F2">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -44,8 +45,8 @@
 
 	<!--<script src="./public/js/jquery-3.1.0.min.js"></script>-->
 	<script src="./public/js/jquery-1.12.1.min.js"></script>
-	
-	
+
+
 	<script src="./public/js/bootstrap.min.js"></script>
 	<script src="./public/js/swiper.jquery.min.js"></script>
     <script src='./public/js/ractive.js'></script>
@@ -57,7 +58,9 @@
 
 <div class="layout" id="top">
 
-	
+	<div style="position: fixed;background: #ffff94;width: 100%;z-index: 1000;text-align: center;font-size: 1.5rem;font-weight: bold;">
+		This content has moved to <a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/">https://kubernetes.io/docs/tutorials/kubernetes-basics/</a>
+	</div>
 
 	<aside class="sidebar">
 		<div class="sidebar__inner">
@@ -187,7 +190,7 @@
 
 
 
-	
+
 
 	<main class="content">
 		<div class="content__sider">
@@ -217,7 +220,7 @@
 			<div class="col-md-8">
 			<p>Users expect applications to be available all the time and developers are expected to deploy new versions of them several times a day. In Kubernetes this is done with rolling updates. <b>Rolling updates</b> allows Deployments to occur with zero downtime by incrementally updating Pods instances with new ones. The new Pods will be scheduled on Nodes with available resources.</p>
 
-			<p>In the previous module we scaled our application to run multiple instances. This is a requirement for performing updates without affecting application availability. By default, the maximum number of Pods that can be unavailable during the update and the maximum number of new Pods that can be created, is one. Both options can be configured to either numbers or percentages (of Pods). 
+			<p>In the previous module we scaled our application to run multiple instances. This is a requirement for performing updates without affecting application availability. By default, the maximum number of Pods that can be unavailable during the update and the maximum number of new Pods that can be created, is one. Both options can be configured to either numbers or percentages (of Pods).
 			In Kubernetes, updates are versioned and any Deployment update can be reverted to a previously (stable) version.</p>
 
 
@@ -287,14 +290,14 @@
 
 				<p>Similar to application Scaling, If a Deployment is exposed publicly, the Service will load-balance the traffic only to available Pods during the update. An available Pod is an instance that is available to the users of the application.</p>
 
-				<p>Rolling updates allow the following actions:</p> 
+				<p>Rolling updates allow the following actions:</p>
 				<ul>
 					<li>Promote an application from one environment to another (via container image updates)</li>
 					<li>Rollback to previous versions</li>
 					<li>Continuous Integration and Continuous Delivery of applications with zero downtime</li>
 
 				</ul>
-				
+
 			</div>
 			<div class="col-md-4">
 				<div class="content__box content__box_fill">
@@ -307,7 +310,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
-				<p> In the following interactive tutorial we’ll update our application to a new version, and also perform a rollback.</p>	
+				<p> In the following interactive tutorial we’ll update our application to a new version, and also perform a rollback.</p>
 			</div>
 		</div>
 		<br>
@@ -323,7 +326,7 @@
 
 
 
-	
+
 		<!-- header start -->
 <footer class="footer" role="contentinfo">
 	<div class="footer__content">
@@ -365,7 +368,7 @@
 	</div>
 </footer>
 <!-- header finish --> <a class="scrolltop" href="#top"></a>
-	
+
 
 </div>
 
