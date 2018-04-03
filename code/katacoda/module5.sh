@@ -38,5 +38,5 @@ echo 'esac' >> ~/.bin/minikube
 chmod +x ~/.bin/minikube
 echo 'export KUBERNETES_MASTER=http://host01:8080' >> ~/.bashrc
 ~/.bin/minikube start
-kubectl run kubernetes-bootcamp --image=docker.io/jocatalin/kubernetes-bootcamp:v1 --port=8080
+kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
 kubectl expose deployments/kubernetes-bootcamp --type="NodePort" --port 8080
