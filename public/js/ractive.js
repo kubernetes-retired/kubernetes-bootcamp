@@ -5152,7 +5152,7 @@
 
   	// TODO if a section is empty it should be discarded. Don't do
   	// that here though - we need to clean everything up first, as
-  	// it may contain removeable whitespace. As a temporary measure,
+  	// it may contain removable whitespace. As a temporary measure,
   	// to pass the existing tests, remove empty `f` arrays
   	if (!section.f.length) {
   		delete section.f;
