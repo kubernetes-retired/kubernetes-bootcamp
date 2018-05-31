@@ -4,7 +4,7 @@ This project has been merged into the central Kubernetes docs repository.
 
 Visit https://kubernetes.io/docs/tutorials/kubernetes-basics/ to view the content.
 
-Changes can be made at https://github.com/kubernetes/website/tree/master/docs/tutorials/kubernetes-basics
+Changes can be made at https://github.com/kubernetes/website/tree/master/content/en/docs/tutorials/kubernetes-basics.
 
 # kubernetes-bootcamp
 This is the official kubernetes bootcamp
