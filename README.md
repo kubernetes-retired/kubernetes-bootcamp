@@ -4,7 +4,7 @@ This project has been merged into the central Kubernetes docs repository.
 
 Visit https://kubernetes.io/docs/tutorials/kubernetes-basics/ to view the content.
 
-Changes can be made at https://github.com/kubernetes/website/tree/master/docs/tutorials/kubernetes-basics
+Changes can be made at https://github.com/kubernetes/website/tree/master/content/en/docs/tutorials/kubernetes-basics.
 
 # kubernetes-bootcamp
 This is the official kubernetes bootcamp
@@ -13,3 +13,7 @@ The goal of the bootcamp content is to introduce developers/ first time users to
 They will become also familiar with main kubernetes concepts.
 
 The bootcamp assumes users have some knowledge of software containers (Docker, rkt, etc).
+
+## Contributing
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for instructions on how to contribute.
